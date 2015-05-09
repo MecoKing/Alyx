@@ -1,0 +1,5 @@
+/Users/hacim/Documents/Programs_xamarin/Alyx/Alyx/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/hacim/Documents/Programs_xamarin/Alyx/Alyx/bin/Debug/Alyx.exe.mdb
+/Users/hacim/Documents/Programs_xamarin/Alyx/Alyx/bin/Debug/Alyx.exe
+/Users/hacim/Documents/Programs_xamarin/Alyx/Alyx/obj/x86/Debug/Alyx.exe
+/Users/hacim/Documents/Programs_xamarin/Alyx/Alyx/obj/x86/Debug/Alyx.exe.mdb
