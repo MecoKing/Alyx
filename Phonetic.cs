@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Persona
+namespace Alyx
 {
 	public class Phonetic {
 		
@@ -21,7 +21,7 @@ namespace Persona
 			return String.Format (" {0}  ", formatted);
 		}
 
-		public static string generate (string term) {
+		public static string generatePhoneticsFor (string term) {
 			string word = reformat (term);
 			string phonetic = "";
 			for (int i = 1; i < word.Length - 2; i++) {
