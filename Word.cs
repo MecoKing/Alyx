@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace Alyx {
 	public class Word {
@@ -45,6 +46,15 @@ namespace Alyx {
 				}
 			}
 			return taggedWords.ToArray ();
+		}
+
+		public static void loadWords () {
+			using (StreamReader reader = new StreamReader ("Vocab.txt")) {
+				string line;
+				while ((line = reader.ReadLine ()) != null) {
+					Program.vocab.Add (new Word (line));
+				}
+			}
 		}
 
 	}
