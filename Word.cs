@@ -5,9 +5,9 @@ using System.IO;
 namespace Alyx {
 	public class Word {
 
-		string name;
-		string tags;
-		string phonetic;
+		public string name;
+		public string tags;
+		public string phonetic;
 
 		//A script will look like this:
 		//    name: tag anotherTag thirdTag moarTags
@@ -46,6 +46,14 @@ namespace Alyx {
 				}
 			}
 			return taggedWords.ToArray ();
+		}
+
+		public static Word fromCollection (string term, Word[] collection) {
+			foreach (Word word in collection) {
+				if (word.name == term)
+					return word;
+			}
+			return null;
 		}
 
 		public static void loadWords () {
