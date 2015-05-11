@@ -11,6 +11,7 @@ namespace Alyx {
 			words = individualWords (reformat (phrase));
 			foreach (Word term in words)
 				Console.Write ("{0} ", term.name);
+			Console.WriteLine ();
 		}
 
 		//Reformats the words in the phrase string
@@ -35,6 +36,7 @@ namespace Alyx {
 			return formatted;
 		}
 
+		//Seperates the phrase into a collection of known words.
 		public Word[] individualWords (string phrase) {
 			List<Word> terms = new List<Word> ();
 			string nonWordChars = " ,.?:;!";
@@ -44,7 +46,15 @@ namespace Alyx {
 					Word newTerm = Word.fromCollection (substring, Program.vocab.ToArray ());
 					if (newTerm != null)
 						terms.Add (newTerm);
-				}
+					substring = "";
+				} else if (i == phrase.Length - 1) {
+					substring += phrase [i];
+					Word newTerm = Word.fromCollection (substring, Program.vocab.ToArray ());
+					if (newTerm != null)
+						terms.Add (newTerm);
+					substring = "";
+				} else
+					substring += phrase [i];
 			}
 			return terms.ToArray ();
 		}
