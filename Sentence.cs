@@ -10,30 +10,28 @@ namespace Alyx {
 			Console.WriteLine (reformat (phrase));
 		}
 
-		public string reformat (string fragment) {
+		public string reformat (string phrase) {
 			string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 			string abc = "abcdefghijklmnopqrstuvwxyz";
 			string formatted = "";
-			for (int i = 0; i < fragment.Length; i++) {
-				if (i == 0) {
-					if (abc.Contains (fragment [i].ToString ()))
-						formatted += ABC [abc.IndexOf (fragment [i])];
-					else if (!"@#$%^&*()+=-|{}[]/><~_".Contains (fragment [i].ToString ()))
-						formatted += fragment [i];
-				} else if (fragment [i - 1] == ' ') {
-					if (abc.Contains (fragment [i].ToString ()))
-						formatted += ABC [abc.IndexOf (fragment [i])];
-					else if (!"@#$%^&*()+=-|{}[]/><~_".Contains (fragment [i].ToString ()))
-						formatted += fragment [i];
-				} else if (ABC.Contains (fragment [i].ToString ()))
-					formatted += abc [ABC.IndexOf (fragment [i])];
-				else if (abc.Contains (fragment [i].ToString ()))
-					formatted += fragment [i];
-				else if (!"@#$%^&*()+=-|{}[]/><~_".Contains (fragment [i].ToString ()))
-					formatted += fragment [i];
+			for (int i = 0; i < phrase.Length; i++) {
+				if (i == 0 || phrase [i - 1] == ' ') {
+					if (abc.Contains (phrase [i].ToString ()))
+						formatted += ABC [abc.IndexOf (phrase [i])];
+					else if (!"@#$%^&*()+=-|{}[]/><~_".Contains (phrase [i].ToString ()))
+						formatted += phrase [i];
+				} else if (ABC.Contains (phrase [i].ToString ()))
+					formatted += abc [ABC.IndexOf (phrase [i])];
+				else if (!"@#$%^&*()+=-|{}[]/><~_".Contains (phrase [i].ToString ()))
+					formatted += phrase [i];
 			}
 			return formatted;
 		}
+
+		public void seperateWords (string phrase) {
+			
+		}
+
 	}
 }
 
