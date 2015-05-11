@@ -18,15 +18,19 @@ namespace Alyx {
 				if (i == 0) {
 					if (abc.Contains (fragment [i].ToString ()))
 						formatted += ABC [abc.IndexOf (fragment [i])];
+					else if (!"@#$%^&*()+=-|{}[]/><~_".Contains (fragment [i].ToString ()))
+						formatted += fragment [i];
 				} else if (fragment [i - 1] == ' ') {
 					if (abc.Contains (fragment [i].ToString ()))
 						formatted += ABC [abc.IndexOf (fragment [i])];
+					else if (!"@#$%^&*()+=-|{}[]/><~_".Contains (fragment [i].ToString ()))
+						formatted += fragment [i];
 				} else if (ABC.Contains (fragment [i].ToString ()))
 					formatted += abc [ABC.IndexOf (fragment [i])];
 				else if (abc.Contains (fragment [i].ToString ()))
 					formatted += fragment [i];
-				else if (fragment [i] == ' ')
-					formatted += " ";
+				else if (!"@#$%^&*()+=-|{}[]/><~_".Contains (fragment [i].ToString ()))
+					formatted += fragment [i];
 			}
 			return formatted;
 		}
