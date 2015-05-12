@@ -48,6 +48,8 @@ namespace Alyx {
 			return taggedWords.ToArray ();
 		}
 
+		//Gets a word with the same name as the given string from a collection
+		//If no such word exists, returns null (Watch out for that!)
 		public static Word fromCollection (string term, Word[] collection) {
 			foreach (Word word in collection) {
 				if (word.name == term)
@@ -56,6 +58,7 @@ namespace Alyx {
 			return null;
 		}
 
+		//Loads all the words from the dictionary file Vocab.txt into the game
 		public static void loadWords () {
 			using (StreamReader reader = new StreamReader ("Vocab.txt")) {
 				string line;

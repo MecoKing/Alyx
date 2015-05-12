@@ -7,6 +7,7 @@ namespace Alyx {
 		public Word[] words;
 		public string[] tags;
 
+		//Creates a new sentence of seperate known words and frequent tags from a given phrase
 		public Sentence (string phrase) {
 			words = individualWords (reformat (phrase));
 			foreach (Word term in words)
@@ -37,6 +38,7 @@ namespace Alyx {
 		}
 
 		//Seperates the phrase into a collection of known words.
+		//Ignores unknown words.
 		public Word[] individualWords (string phrase) {
 			List<Word> terms = new List<Word> ();
 			string nonWordChars = " ,.?:;!";

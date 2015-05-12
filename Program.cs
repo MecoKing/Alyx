@@ -6,8 +6,10 @@ namespace Alyx { //Protector of Humanity
 
 		public static List<Word> vocab = new List<Word> ();
 
+		//Loads all the files and stuff. Used once... at startup.
 		public static void Startup () {
 			Word.loadWords ();
+			Log.Write ("Program.cs", "GENERAL", "All file loading methods have completed their tasks captain!");
 		}
 
 		public static void Main (string[] args) {
