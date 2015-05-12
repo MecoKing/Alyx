@@ -18,6 +18,9 @@ namespace Alyx { //Protector of Humanity
 			for (;;) {
 				string input = Console.ReadLine ();
 				Sentence inSentence = new Sentence (input);
+				foreach (Word term in inSentence.words)
+					Console.Write ("{0} ", term.name);
+				Console.WriteLine ("\n{0} {1} {2}", inSentence.tags [0], inSentence.tags [1], inSentence.tags [2]);
 			}
 		}
 	}
