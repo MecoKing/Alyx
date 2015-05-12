@@ -10,9 +10,10 @@ namespace Alyx {
 		//Creates a new sentence of seperate known words and frequent tags from a given phrase
 		public Sentence (string phrase) {
 			words = individualWords (reformat (phrase));
+			selectCommonTags (setTagFrequency ());
 			foreach (Word term in words)
 				Console.Write ("{0} ", term.name);
-			Console.WriteLine ();
+			Console.WriteLine ("\n{0} {1} {2}", tags [0], tags [1], tags [2]);
 		}
 
 		//Reformats the words in the phrase string
@@ -59,6 +60,62 @@ namespace Alyx {
 					substring += phrase [i];
 			}
 			return terms.ToArray ();
+		}
+
+		//Determines the frequency of tags showing up in the words array
+		public Dictionary<string, int> setTagFrequency () {
+			Dictionary <string, int> tagCounter = new Dictionary<string, int> ();
+			foreach (Word word in words) {
+				string substring = "";
+				for (int i = 0; i < word.tags.Length; i++) {
+					if (word.tags [i] == ' ') {
+						if (tagCounter.ContainsKey (substring))
+							tagCounter [substring]++;
+						else
+							tagCounter.Add (substring, 1);
+						substring = "";
+					} else if (i == word.tags.Length - 1) {
+						substring += word.tags [i];
+						if (tagCounter.ContainsKey (substring))
+							tagCounter [substring]++;
+						else
+							tagCounter.Add (substring, 1);
+						substring = "";
+					} else
+						substring += word.tags [i];
+				}
+			}
+			return tagCounter;
+		}
+
+		//Chooses the top three most frequent tags and sets them as this sentences tag collection
+		public void selectCommonTags (Dictionary<string, int> frequencies) {
+			frequencies.Remove ("");
+			int firstFrequency = 0;
+			int secondFrequency = 0;
+			int thirdFrequency = 0;
+			string first = "";
+			string second = "";
+			string third = "";
+			foreach (string tag in frequencies.Keys) {
+				if (frequencies [tag] >= firstFrequency) {
+					thirdFrequency = secondFrequency;
+					secondFrequency = firstFrequency;
+					firstFrequency = frequencies [tag];
+					third = second;
+					second = first;
+					first = tag;
+				} else if (frequencies [tag] >= secondFrequency) {
+					thirdFrequency = secondFrequency;
+					secondFrequency = frequencies [tag];
+					third = second;
+					second = tag;
+				} else {
+					thirdFrequency = frequencies [tag];
+					third = tag;
+				}
+			}
+			tags = new string[] { first, second, third };
 		}
 
 	}
