@@ -4,8 +4,8 @@ Add: verb math number
 Advancement: noun
 Again: adverb
 An: article
-Animal: noun animal living
-Baby: noun adjective human living young
+Animal: noun animal living male female
+Baby: noun adjective human living young male female
 Be: verb
 Benefit: noun positive
 Blue: adjective colour cold
@@ -16,7 +16,7 @@ Broken: adjective negative
 Brown: adjective colour
 By: preposition
 Can: verb
-Child: noun human young living
+Child: noun human young living male female
 Code: noun verb virtual number information
 Communication: noun social language
 Conversation: noun social language
@@ -25,7 +25,7 @@ Day: noun time
 Dictionary: noun information language physical
 Discussion: noun social language verbal
 Do: verb
-Dog: noun animal living mammal canine domestic
+Dog: noun animal living mammal canine domestic male female
 Ear: noun body living sound
 Enough: adverb measure
 Ever: adverb
@@ -38,48 +38,43 @@ Follow: verb
 Following: adjective
 Food: noun food taste
 For: preposition
-Fox: noun animal living mammal canine wild
+Fox: noun animal living mammal canine wild male female
 Friday: noun adverb time
 Get: verb
 Give: verb social
 Green: adjective verb colour cold nature
 Greet: verb social polite
-Greetings: noun social polite
+Greetings: noun exclamation social polite start formal
 Grey: adjective colour neutral
 Good: noun adjective positive
-Goodbye:(excl)Express good wishes when parting.
-Hate:(v)Feel intense or passionate dislike for someone or something.
-Have:(v)Possess, own or hold.
-Head:(n)The front, upper part of an animal or human.
-Head:(n)The upper part of something.
-Hear:(v)Perceive with the ear a sound made.
-Hello:(excl)Used as a greeting.
-Help:(v)Make it easier to do something by services or resources.
-Here:(adv)In, at or to this place or position.
-Hi:(excl)Used as a friendly greeting or to attract attention.
-Home:(n)The place where one lives permanently.
-Horrible:(adj)Causing or likely to cause horror.
-How:(adv)In what way or manner.
-Human:(n)A person distinguished from an animal or alien.
-Human:(adj)Characteristic of people or human beings.
-Humble:(adj)Having or showing Modesty.
-I:(prn)Used be a speaker to refer to himself/herself as the object.
-Improvement:(n)An example of improving or being improved.
-In:(adv)Expressing movement with the result that something becomes enclosed by something else.
-In:(prep)Expressing the situation of something that is enclosed by something else.
-It:(prn)Used to refer to something previously mentioned or easily identified.
-Italian:(n)A native or inhabitant of Italy.
-Italian:(adj)Relating to Italy.
-Italy:(n)A country in southern Europe.
-Johnny:(Nm)A male name.
-Jump:(v)Push oneself off a surface into the air using the muscles in ones leg.
-Kiss:(v)Touch with the lips as a sign of love.
-Knight:(n)A man who served his lord as a mounted soldier in armour.
-Know:(v)Be aware of through observation or information.
-Knowledge:(n)Facts information or skills acquired by a person.
-Language:(n)The method of human communication by words.
-Last:(adj)Coming after all others in time or order.
-Last:(adv)On the last occasion before the present.
+Goodbye: exclamation polite social end formal
+Hate: verb emotion negative
+Have: verb material
+Head: noun verb body mental control
+Hear: verb mental sound
+Hello: exclamation polite start formal
+Help: verb polite positive
+Here: adverb position
+Hi: exclamation polite start informal
+Home: noun building human position domestic
+Horrible: adjective negative
+How: adverb
+Human: noun adjective living social mental male female
+Humble: adjective positive polite
+I: pronoun personal human
+Improvement: noun positive
+In: adverb preposition position
+It: pronoun
+Italian: noun adjective position country human culture
+Italy: noun position country
+Johnny: name male
+Jump: verb physical
+Kiss: verb physical emotion love
+Knight: noun culture warrior human ancient
+Know: verb mental knowledge information
+Knowledge: noun knowledge information
+Language: noun language social information
+Last: adjective adverb end
 Lazy:(adj)Unwilling to work or use energy.
 Lead:(v)Cause to go with one.
 Lead:(n)A soft, heavy, transition-metal element.

@@ -10,7 +10,8 @@ namespace Alyx {
 		//Creates a new sentence of seperate known words and frequent tags from a given phrase
 		public Sentence (string phrase) {
 			words = individualWords (reformat (phrase));
-			selectCommonTags (setTagFrequency ());
+			tags = commonTags (tagFrequencies ());
+//			selectCommonTags (tagFrequencies ());
 			foreach (Word term in words)
 				Console.Write ("{0} ", term.name);
 			Console.WriteLine ("\n{0} {1} {2}", tags [0], tags [1], tags [2]);
@@ -88,9 +89,28 @@ namespace Alyx {
 			return tagCounter;
 		}
 
+		public string[] commonTags (Dictionary<string, int> frequencies) {
+			foreach (string illegalTag in new string[] {"", "pronoun", "noun", "verb", "adverb", "article", "preposition", "adjective"})
+				frequencies.Remove (illegalTag);
+			List<string> orderedTags = new List<string> ();
+			while (frequencies.Count != 0) {
+				Tuple<string, int> frequentTag = new Tuple<string, int> ("NULLTAG", 1024);
+				foreach (string tag in frequencies.Keys) {
+					if (frequencies [tag] <= frequentTag.Item2)
+						frequentTag = new Tuple<string, int> (tag, frequencies [tag]);
+				}
+				frequencies.Remove (frequentTag.Item1);
+				orderedTags.Add (frequentTag.Item1);
+				frequentTag = new Tuple<string, int> ("NULLTAG", 1024);
+			}
+			string[] tagArray = orderedTags.ToArray ();
+			return new string[] { tagArray [tagArray.Length - 1], tagArray [tagArray.Length - 2], tagArray [tagArray.Length - 3] };
+		}
+
 		//Chooses the top three most frequent tags and sets them as this sentences tag collection
 		public void selectCommonTags (Dictionary<string, int> frequencies) {
-			frequencies.Remove ("");
+			foreach (string illegalTag in new string[] {"", "pronoun", "noun", "verb", "adverb", "article", "preposition", "adjective"})
+				frequencies.Remove (illegalTag);
 			int firstFrequency = 0;
 			int secondFrequency = 0;
 			int thirdFrequency = 0;
