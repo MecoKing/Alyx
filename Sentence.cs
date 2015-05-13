@@ -64,7 +64,7 @@ namespace Alyx {
 		}
 
 		//Determines the frequency of tags showing up in the words array
-		public Dictionary<string, int> setTagFrequency () {
+		public Dictionary<string, int> tagFrequencies () {
 			Dictionary <string, int> tagCounter = new Dictionary<string, int> ();
 			foreach (Word word in words) {
 				string substring = "";
