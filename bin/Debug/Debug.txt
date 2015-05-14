@@ -12,3 +12,7 @@
 [2015-05-13 7:17:50 PM, Program.cs] GENERAL: All file loading methods have completed their tasks captain!
 [2015-05-13 7:26:59 PM, Program.cs] GENERAL: All file loading methods have completed their tasks captain!
 [2015-05-14 5:43:06 PM, Program.cs] GENERAL: All file loading methods have completed their tasks captain!
+[2015-05-14 5:45:50 PM, Program.cs] GENERAL: All file loading methods have completed their tasks captain!
+[2015-05-14 5:46:08 PM, Program.cs] GENERAL: All file loading methods have completed their tasks captain!
+[2015-05-14 5:48:09 PM, Program.cs] GENERAL: All file loading methods have completed their tasks captain!
+[2015-05-14 5:48:17 PM, Program.cs] GENERAL: All file loading methods have completed their tasks captain!

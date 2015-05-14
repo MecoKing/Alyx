@@ -11,7 +11,6 @@ namespace Alyx {
 		public Sentence (string phrase) {
 			words = individualWords (reformat (phrase));
 			tags = commonTags (tagFrequencies ());
-//			selectCommonTags (tagFrequencies ());
 			foreach (Word term in words)
 				Console.Write ("{0} ", term.name);
 			Console.WriteLine ("\n{0} {1} {2}", tags [0], tags [1], tags [2]);
@@ -91,6 +90,7 @@ namespace Alyx {
 			return tagCounter;
 		}
 
+		//Returns the top three most frequent tags from the given Dictionary
 		public string[] commonTags (Dictionary<string, int> frequencies) {
 			List<string> orderedTags = new List<string> ();
 			while (frequencies.Count != 0) {
@@ -101,40 +101,9 @@ namespace Alyx {
 				}
 				frequencies.Remove (frequentTag.Item1);
 				orderedTags.Add (frequentTag.Item1);
-				frequentTag = new Tuple<string, int> ("NULLTAG", 1024);
 			}
 			string[] tagArray = orderedTags.ToArray ();
 			return new string[] { tagArray [tagArray.Length - 1], tagArray [tagArray.Length - 2], tagArray [tagArray.Length - 3] };
 		}
-
-		//Chooses the top three most frequent tags and sets them as this sentences tag collection
-		public void selectCommonTags (Dictionary<string, int> frequencies) {
-			int firstFrequency = 0;
-			int secondFrequency = 0;
-			int thirdFrequency = 0;
-			string first = "";
-			string second = "";
-			string third = "";
-			foreach (string tag in frequencies.Keys) {
-				if (frequencies [tag] >= firstFrequency) {
-					thirdFrequency = secondFrequency;
-					secondFrequency = firstFrequency;
-					firstFrequency = frequencies [tag];
-					third = second;
-					second = first;
-					first = tag;
-				} else if (frequencies [tag] >= secondFrequency) {
-					thirdFrequency = secondFrequency;
-					secondFrequency = frequencies [tag];
-					third = second;
-					second = tag;
-				} else {
-					thirdFrequency = frequencies [tag];
-					third = tag;
-				}
-			}
-			tags = new string[] { first, second, third };
-		}
-
 	}
 }
