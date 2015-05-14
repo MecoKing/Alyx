@@ -39,7 +39,7 @@ Following: adjective
 Food: noun food taste
 For: preposition
 Fox: noun animal living mammal canine wild male female
-Friday: noun adverb time
+Friday: noun adverb time day
 Get: verb
 Give: verb social
 Green: adjective verb colour cold nature
@@ -61,7 +61,7 @@ Horrible: adjective negative
 How: adverb
 Human: noun adjective living social mental male female
 Humble: adjective positive polite
-I: pronoun personal human
+I: pronoun self human
 Improvement: noun positive
 In: adverb preposition position
 It: pronoun
@@ -75,28 +75,23 @@ Know: verb mental knowledge information
 Knowledge: noun knowledge information
 Language: noun language social information
 Last: adjective adverb end
-Lazy:(adj)Unwilling to work or use energy.
-Lead:(v)Cause to go with one.
-Lead:(n)A soft, heavy, transition-metal element.
-Learn:(v)Gain or acquire knowledge or skill.
-Leave:(v)Go away from.
-Let:(v)Not prevent or forbid.
-Life:(n)The period between birth and death of a living thing.
-Like:(v)Find agreeable, enjoyable or satisfactory.
-Like:(adj)Having similar qualities or characteristics to another person or thing.
-Live:(v)Remain alive.
-Many:(prn)A large number of.
-Me:(prn)Used be a speaker to refer to himself/herself as the object.
-Mean:(v)Intend to convey, indicate or symbolize.
-Mean:(adj)Unkind, spiteful or unfair.
-Monday:(n)The day of the week before Tuesday and following Sunday.
-Monday:(adv)On Monday.
-Money:(n)A current medium of exchange in the form of coins and banknotes.
-Mood:(n)A temporary state of mind or feeling.
-Mouth:(n)Opening in the lower part of the human face.
-My:(art)Belonging to or associated with the speaker.
-Name:(n)A word or words by which a noun is addressed or referred to.
-Name:(v)To give a name to something.
+Lazy: adjective physical
+Lead: noun verb control human metal element start
+Learn: verb knowledge information new
+Leave: verb position move end
+Let: verb
+Life: noun living animal plant human
+Like: verb adjective mental same
+Live: verb living animal plant human music
+Many: pronoun plural
+Me: pronoun self human
+Mean: verb adjective information bad
+Monday: noun adverb time day
+Money: noun money value
+Mood: noun emotion mental
+Mouth: noun body living taste food
+My: article self human
+Name: noun verb name
 Need:(v)Require something because it is essential or very important.
 Nice:(adj)Pleasant, agreeable, satisfactory.
 Nope:(excl)Informal variant of no.
