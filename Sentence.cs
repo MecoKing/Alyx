@@ -86,12 +86,12 @@ namespace Alyx {
 						substring += word.tags [i];
 				}
 			}
+			foreach (string illegalTag in new string[] {"", "pronoun", "noun", "verb", "adverb", "article", "preposition", "adjective"})
+				tagCounter.Remove (illegalTag);
 			return tagCounter;
 		}
 
 		public string[] commonTags (Dictionary<string, int> frequencies) {
-			foreach (string illegalTag in new string[] {"", "pronoun", "noun", "verb", "adverb", "article", "preposition", "adjective"})
-				frequencies.Remove (illegalTag);
 			List<string> orderedTags = new List<string> ();
 			while (frequencies.Count != 0) {
 				Tuple<string, int> frequentTag = new Tuple<string, int> ("NULLTAG", 1024);
@@ -109,8 +109,6 @@ namespace Alyx {
 
 		//Chooses the top three most frequent tags and sets them as this sentences tag collection
 		public void selectCommonTags (Dictionary<string, int> frequencies) {
-			foreach (string illegalTag in new string[] {"", "pronoun", "noun", "verb", "adverb", "article", "preposition", "adjective"})
-				frequencies.Remove (illegalTag);
 			int firstFrequency = 0;
 			int secondFrequency = 0;
 			int thirdFrequency = 0;
