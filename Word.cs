@@ -68,5 +68,11 @@ namespace Alyx {
 			}
 		}
 
+		public static void addUnknown (string term) {
+			using (StreamWriter writer = new StreamWriter ("UnknownWords.txt", true)) {
+				writer.WriteLine (term);
+			}
+		}
+
 	}
 }

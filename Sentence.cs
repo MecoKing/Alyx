@@ -49,12 +49,16 @@ namespace Alyx {
 					Word newTerm = Word.fromCollection (substring, Program.vocab.ToArray ());
 					if (newTerm != null)
 						terms.Add (newTerm);
+					else
+						Word.addUnknown (substring);
 					substring = "";
 				} else if (i == phrase.Length - 1) {
 					substring += phrase [i];
 					Word newTerm = Word.fromCollection (substring, Program.vocab.ToArray ());
 					if (newTerm != null)
 						terms.Add (newTerm);
+					else
+						Word.addUnknown (substring);
 					substring = "";
 				} else
 					substring += phrase [i];
