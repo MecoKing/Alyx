@@ -8,6 +8,7 @@ namespace Alyx { //Protector of Humanity
 
 		//Loads all the files and stuff. Used once... at startup.
 		public static void Startup () {
+			Log.Clear ();
 			Word.loadWords ();
 			Log.Write ("Program.cs", "GENERAL", "All file loading methods have completed their tasks captain!");
 		}
