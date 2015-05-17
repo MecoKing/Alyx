@@ -103,7 +103,11 @@ namespace Alyx {
 				orderedTags.Add (frequentTag.Item1);
 			}
 			string[] tagArray = orderedTags.ToArray ();
-			return new string[] { tagArray [tagArray.Length - 1], tagArray [tagArray.Length - 2], tagArray [tagArray.Length - 3] };
+			return new string[] {
+				tagArray [tagArray.Length - 1],
+				tagArray [tagArray.Length - 2],
+				tagArray [tagArray.Length - 3],
+			};
 		}
 	}
 }
