@@ -11,6 +11,7 @@ namespace Alyx {
 		public Sentence (string phrase) {
 			words = individualWords (reformat (phrase));
 			tags = commonTags (tagFrequencies ());
+
 			foreach (Word term in words)
 				Console.Write ("{0} ", term.name);
 			Console.WriteLine ("\n{0} {1} {2}", tags [0], tags [1], tags [2]);
