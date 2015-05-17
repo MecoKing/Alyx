@@ -26,12 +26,12 @@ Dictionary: noun information language physical
 Discussion: noun social language verbal
 Do: verb
 Dog: noun animal living mammal canine domestic male female
-Ear: noun body living sound
+Ear: noun body living sound sense
 Enough: adverb measure
 Ever: adverb
-Eye: noun body living visual
+Eye: noun body living visual sense
 Family: noun collective human
-Feel: verb mental emotion
+Feel: verb mental emotion sense
 Few: adjective small number
 Fill: verb measure
 Follow: verb
@@ -51,22 +51,22 @@ Goodbye: exclamation polite social end formal
 Hate: verb emotion negative
 Have: verb material
 Head: noun verb body mental control
-Hear: verb mental sound
+Hear: verb mental sound sense
 Hello: exclamation polite start formal
 Help: verb polite positive
 Here: adverb position
 Hi: exclamation polite start informal
 Home: noun building human position domestic
 Horrible: adjective negative
-How: adverb
+How: adverb question
 Human: noun adjective living social mental male female
 Humble: adjective positive polite
 I: pronoun self human
 Improvement: noun positive
 In: adverb preposition position
 It: pronoun
-Italian: noun adjective position country human culture
-Italy: noun position country
+Italian: noun adjective position country human culture italy
+Italy: noun position country italy
 Johnny: name male
 Jump: verb physical
 Kiss: verb physical emotion love
@@ -89,113 +89,81 @@ Mean: verb adjective information bad
 Monday: noun adverb time day
 Money: noun money value
 Mood: noun emotion mental
-Mouth: noun body living taste food
+Mouth: noun body living taste food sense
 My: article self human
 Name: noun verb name
-Need:(v)Require something because it is essential or very important.
-Nice:(adj)Pleasant, agreeable, satisfactory.
-Nope:(excl)Informal variant of no.
-Nose:(n)Part projecting above the mouth of an animal or person.
-Nose:(n)Front end of a vehicle.
-Nose:(v)To investigate or pry into something.
-Not:(adv)Used as a short substitute for the negative clause.
-Of:(prep)Expressing the relationship between a part and a whole.
-One:(adj)A single thing.
-Opinion:(n)A view or judgement formed about something.
-Orange:(n)A round juicy citrus fruit with a bright reddish yellow rind.
-Orange:(adj)Reddish yellow, like a ripe orange in colour.
-Organ:(n)A self contained part of an organism that has a vital function.
-Ought:(v)Used to indicate duty or correctness.
-Over:(prep)Extending directly upward from.
-Pasta:(n)An Italian dish consisting of shaped dough.
-Pencil:(n)An instrument for writing or drawing.
-Pink:(adj)Of a colour intermediate between red and white.
-Pizza:(n)An Italian dish consisting of a flat round dough covered with toppings.
-Present:(n)The period of time now occurring.
-Present:(n)Something given to someone as a gift.
-Present:(v)Give or show someone something.
-Present:(adj)Be in a particular place.
-Problem:(n)A matter or situation regarded as unwanted or harmful.
-Process:(n)A series of actions or steps taken in order to achieve a particular end.
-Process:(v)Perform a series of mechanical or chemical operations on something.
-Program:(n)A planned series of events, items or performances.
-Program:(n)A series of coded software instructions.
-Program:(v)Provide a computer with coded instructions.
-Progress:(n)Forward or onward movement toward a destination.
-Purple:(adj)A colour intermediate between red and blue.
-Quick:(adj)Moving fast or doing something in a short time.
-Real:(adj)Actually existing as a thing or occurring fact.
-Red:(adj)A colour at the end of the spectrum next to orange and opposite violet.
-Saturday:(n)The day of the week before Sunday and following Friday.
-Saturday:(adv)On Saturday.
-Say:(v)Utter words so as to convey information.
-Scent:(n)A distinctive smell, especially one that is pleasant.
-Scent:(v)Discern by the use of smell.
-See:(v)Perceive with the eyes.
-Self:(n)A person’s essential being that distinguishes them from others.
-Sense:(n)A faculty by which the body perceives an external stimulus.
-Sense:(v)Perceive by a sense or senses.
-Several:(adj)Separate or respective.
-Several:(prn)More than two but not many.
-Sight:(n)The faculty or power of seeing.
-Sight:(v)Manage to see or observe.
-Since:(prep)In the intervening period between.
-Slave:(n)Person who is the property of another and is forced to obey him.
-Smell:(n)The faculty or power of perceiving doors or scents.
-Smell:(v)Perceive or detect the door or scent of something.
-Software:(n)The programs and other operating information used by a computer.
-Some:(art)An unspecified amount or number of.
-Sorry:(adj)Feeling distress especially through sympathy.
-Sound:(n)Vibrations that travel through the air or another medium and can be heard.
-Sound:(v)Emit or cause to emit a sound.
-Speak:(v)Say something in order to convey information.
-State:(n)The particular condition that someone or something is in at a specific time.
-State:(adj)Of, provided by, or concerned with the civil government of a country.
-State:(v)Express something definitely or clearly in speech or writing.
-Start:(n)The begging of something.
-Start:(v)Come into being.
-Sunday:(n)The day of the week before Monday and following Saturday.
-Sunday:(adv)On Sunday.
-Taste:(n)The sensation of flavour perceived in the mouth in contact with a substance.
-Taste:(v)Perceive or experience the flavour of.
-Technology:(n)The application of scientific knowledge for practical purposes.
-Test:(n)A procedure intended to determine the quality or reliability of something.
-Test:(v)Take measures to check the quality or reliability of something.
-That:(prn)Used to identify a specific person or thing observed by the speaker.
-The:(art)Used to refer to a noun.
-There:(adv)In, at or to that place or position.
-Think:(v)Have a particular opinion, belief or idea about something.
-This:(prn)Used to identify a specific person are thing close at hand.
-Those:(prn)PLURAL OF ‘THAT’ Used to identify specific people or things observed by the speaker.
-Throw:(v)Propel something with force through the air by a movement of the arm and hand.
-Thursday:(n)The day of the week before Friday and following Wednesday.
-Thursday:(adv)On Thursday.
-Time:(n)The indefinite continued progress of existence and events in the past, present and future.
-Time:(v)Measure the time taken by a process or activity.
-To:(prep)Used to connect two words in a sentence.
-Today:(adv)In the course of this present day.
-Today:(n)This present day.
-Tongue:(n)The fleshy muscular organ in the mouth of an animal.
-Tuesday:(n)The day of the week before Wednesday and following Monday.
-Tuesday:(adv)On Tuesday.
-Understand:(v)Perceive the intended meaning of something.
-User:(n)A person who uses or operates something.
-Violet:(adj)Of a purplish blue colour.
-Violet:(n)A herbaceous plant of temperate regions.
-Vision:(n)The faculty or state of being able to see.
-Vision:(n)An experience of seeing something in a dream.
-We:(prn)Used by the speaker to refer to themselves and one or more other people.
-Weather:(n)The state of the atmosphere at a place and time.
-Weather:(v)Wear away by exposure to air.
-Wednesday:(n)The day of the week before Thursday and following Tuesday.
-Wednesday:(adv)On Wednesday.
-Welcome:(n)An instance or manner of greeting someone.
-Welcome:(v)Greet someone in a glad or friendly way.
-What:(art)Asking for information specifying something.
-White:(adj)Of the colour of milk or fresh snow.
-Why:(adv)For what reason or purpose.
-Word:(n)A single distinct meaningful element of speech used to form a sentence.
-Yellow:(adj)The colour between orange and green in the spectrum.
-Yellow:(v)Become a yellow colour.
-You:(prn)Used to refer to the person the speaker is addressing.
-Your:(art)Belonging to or associated with the person or people the speaker is addressing.
+Need: verb
+Nice: adjective good
+Nope: exclamation no
+Nose: noun verb body front investigate scent sense
+Not: adjective no
+Of: preposition
+One: adjective one
+Opinion: noun mental feeling human
+Orange: noun colour fruit food warm
+Organ: noun body living
+Ought: verb duty
+Over: preposition up
+Pasta: noun food italy
+Pencil: noun verb art words
+Pink: adjective colour bright
+Pizza: noun food italy
+Present: noun verb adjective gift happy event now time
+Problem: noun bad challenge
+Process: noun verb event mechanical chemical
+Program: noun verb event code language
+Progress: noun good forward
+Purple: adjective colour cold alien
+Quick: adjective fast move
+Real: adjective exist state
+Red: adjective colour hot
+Saturday: noun adverb time day
+Say: verb social language verbal
+Scent: noun verb scent
+See: verb visual sense
+Self: noun self
+Sense: noun verb sense
+Several: adjective pronoun plural
+Sight: noun verb visual sense
+Since: preposition time
+Slave: noun human command
+Smell: noun verb scent sense
+Software: noun code digital
+Some: article plural
+Sorry: adjective sad emotion mental
+Sound: noun verb sound
+Speak: verb verbal social language
+State: noun verb adjective state position country
+Start: noun verb start
+Sunday: noun adverb time day
+Taste: noun verb taste food sense
+Technology: noun digital mechanical new
+Test: noun verb test event challenge
+That: pronoun one
+The: article generic
+There: adverb position
+Think: verb mental information emotion human
+This: pronoun one
+Those: pronoun plural
+Throw: verb air strength
+Thursday: noun adverb time day
+Time: noun verb time start end
+To: preposition position
+Today: adverb noun time day now
+Tongue: noun taste food sense body muscle
+Tuesday: adverb noun time day
+Understand: verb information mental new
+User: noun human physical
+Violet: noun adjective colour cold flower
+Vision: noun visual position sense
+We: pronoun plural social
+Weather: noun verb air wet dry storm
+Wednesday: noun adverb time day
+Welcome: noun verb social start good
+What: article question
+White: adjective time
+Why: adverb question
+Word: noun language information 
+Yellow: adjective verb colour bright
+You: pronoun
+Your: article possession
