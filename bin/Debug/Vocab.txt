@@ -1,30 +1,38 @@
 A: article
 Abode: noun shelter
 Add: verb math number
+Added: verb math number past
 Advancement: noun
 Again: adverb
+Am: verb state present
 An: article
 Animal: noun animal living male female
 Baby: noun adjective human living young male female
-Be: verb
+Be: verb state
 Benefit: noun positive
 Blue: adjective colour cold
 Black: adjective colour dark
 Body: noun living animal body
+Bodies: noun living animal body plural
 Brain: noun body mental living
-Broken: adjective negative
+Break: verb negative divide
+Broke: verb negative divide past
+Broken: adjective negative divide
 Brown: adjective colour
 By: preposition
 Can: verb
+Cant: verb negative
 Child: noun human young living male female
 Code: noun verb virtual number information
 Communication: noun social language
 Conversation: noun social language
+Could: verb past
 Database: noun number information virtual
 Day: noun time
 Dictionary: noun information language physical
 Discussion: noun social language verbal
-Do: verb
+Do: verb action
+Did: verb action past
 Dog: noun animal living mammal canine domestic male female
 Ear: noun body living sound sense
 Enough: adverb measure
@@ -119,10 +127,13 @@ Real: adjective exist state
 Red: adjective colour hot
 Saturday: noun adverb time day
 Say: verb social language verbal
+Said: verb social language verbal past
+Saw: noun verb visual sense past tool wood
 Scent: noun verb scent
 See: verb visual sense
 Self: noun self
 Sense: noun verb sense
+Sensed: noun verb sense past
 Several: adjective pronoun plural
 Sight: noun verb visual sense
 Since: preposition time
@@ -156,6 +167,7 @@ Understand: verb information mental new
 User: noun human physical
 Violet: noun adjective colour cold flower
 Vision: noun visual position sense
+Was: verb state past
 We: pronoun plural social
 Weather: noun verb air wet dry storm
 Wednesday: noun adverb time day
