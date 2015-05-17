@@ -4,9 +4,11 @@ Add: verb math number
 Added: verb math number past
 Advancement: noun
 Again: adverb
+Alyx: name self
 Am: verb state present
 An: article
 Animal: noun animal living male female
+Are: verb state present
 Baby: noun adjective human living young male female
 Be: verb state
 Benefit: noun positive
@@ -54,6 +56,7 @@ Green: adjective verb colour cold nature
 Greet: verb social polite
 Greetings: noun exclamation social polite start formal
 Grey: adjective colour neutral
+Going: noun adjective verb move position present future
 Good: noun adjective positive
 Goodbye: exclamation polite social end formal
 Hate: verb emotion negative
@@ -91,12 +94,15 @@ Let: verb
 Life: noun living animal plant human
 Like: verb adjective mental same
 Live: verb living animal plant human music
+Look: verb noun exclamation visual position sense
+Looks: verb noun visual position sense plural
 Many: pronoun plural
 Me: pronoun self human
 Mean: verb adjective information bad
 Monday: noun adverb time day
 Money: noun money value
 Mood: noun emotion mental
+Morning: noun adverb time day start
 Mouth: noun body living taste food sense
 My: article self human
 Name: noun verb name
@@ -139,6 +145,7 @@ Sight: noun verb visual sense
 Since: preposition time
 Slave: noun human command
 Smell: noun verb scent sense
+So: adverb amount
 Software: noun code digital
 Some: article plural
 Sorry: adjective sad emotion mental
@@ -147,6 +154,8 @@ Speak: verb verbal social language
 State: noun verb adjective state position country
 Start: noun verb start
 Sunday: noun adverb time day
+Talk: noun verb verbal social language
+Talking: noun verb verbal social language present future
 Taste: noun verb taste food sense
 Technology: noun digital mechanical new
 Test: noun verb test event challenge
