@@ -4,6 +4,13 @@ using System.Collections.Generic;
 namespace Alyx {
 	public class Sentence {
 
+		string[] sentenceModels = new string[] {
+			"article adjective adjective noun verb adverb article adjective noun",
+			"pronoun verb adverb"
+		};
+
+
+
 		public Word[] words;
 		public string[] tags;
 
@@ -114,5 +121,27 @@ namespace Alyx {
 				tagArray [tagArray.Length - 3],
 			};
 		}
+
+		public string generate () {
+			List<Word> generatedPhrase = new List<Word> ();
+			string sentenceModel = sentenceModels [new Random ().Next (sentenceModels.Length)];
+			string substring = "";
+			for (int i = 0; i < sentenceModel.Length; i++) {
+				if (sentenceModel [i] == ' ' || i == sentenceModel.Length - 1) {
+					if (i == sentenceModel.Length - 1)
+						substring += sentenceModel [i];
+					Word[] taggedWords = Word.wordsTaggedFromCollection (Program.vocab.ToArray (), tags[0], tags [1], tags [2], substring);
+					if (taggedWords.Length > 0)
+						generatedPhrase.Add (taggedWords [new Random ().Next (taggedWords.Length)]);
+					substring = "";
+				} else
+					substring += sentenceModel [i];
+			}
+			string phrase = "";
+			foreach (Word term in generatedPhrase)
+				phrase += term.name + " ";
+			return phrase;
+		}
+
 	}
 }
