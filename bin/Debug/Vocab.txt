@@ -1,70 +1,73 @@
 A: article
 Abode: noun shelter
-Add: verb math number
-Added: verb math number past
+Add: Verb math number
+Added: Verb math number past
 Advancement: noun
 Again: adverb
 Alyx: name self
-Am: verb state present
+Am: Verb state present
 An: article
 Animal: noun animal living male female
-Are: verb state present
+Are: Verb state present
 Baby: noun adjective human living young male female
-Be: verb state
+Be: Verb state
 Benefit: noun positive
 Blue: adjective colour cold
 Black: adjective colour dark
 Body: noun living animal body
 Bodies: noun living animal body plural
 Brain: noun body mental living
-Break: verb negative divide
-Broke: verb negative divide past
+Break: Verb negative divide
+Broke: Verb negative divide past
 Broken: adjective negative divide
 Brown: adjective colour
 By: preposition
-Can: verb
-Cant: verb negative
+Can: Verb
+Cant: Verb negative
 Child: noun human young living male female
-Code: noun verb virtual number information
+Code: noun Verb virtual number information
 Communication: noun social language
 Conversation: noun social language
-Could: verb past
+Could: Verb past
 Database: noun number information virtual
 Day: noun time
 Dictionary: noun information language physical
-Discussion: noun social language verbal
-Do: verb action
-Did: verb action past
+Discussion: noun social language Verbal
+Do: Verb action
+Did: Verb action past
 Dog: noun animal living mammal canine domestic male female
 Ear: noun body living sound sense
 Enough: adverb measure
+Evening: noun adverb time day end
 Ever: adverb
 Eye: noun body living visual sense
 Family: noun collective human
-Feel: verb mental emotion sense
+Feel: Verb mental emotion sense
 Few: adjective small number
-Fill: verb measure
-Follow: verb
+Fill: Verb measure
+Find: Verb noun visual object lost
+Found: Verb noun visual object lost past
+Follow: Verb
 Following: adjective
 Food: noun food taste
 For: preposition
 Fox: noun animal living mammal canine wild male female
 Friday: noun adverb time day
-Get: verb
-Give: verb social
-Green: adjective verb colour cold nature
-Greet: verb social polite
+Get: Verb
+Give: Verb social
+Green: adjective Verb colour cold nature
+Greet: Verb social polite
 Greetings: noun exclamation social polite start formal
 Grey: adjective colour neutral
-Going: noun adjective verb move position present future
+Going: noun adjective Verb move position present future
 Good: noun adjective positive
 Goodbye: exclamation polite social end formal
-Hate: verb emotion negative
-Have: verb material
-Head: noun verb body mental control
-Hear: verb mental sound sense
+Hate: Verb emotion negative
+Have: Verb material
+Head: noun Verb body mental control
+Hear: Verb mental sound sense
 Hello: exclamation polite start formal
-Help: verb polite positive
+Help: Verb polite positive
 Here: adverb position
 Hi: exclamation polite start informal
 Home: noun building human position domestic
@@ -79,112 +82,115 @@ It: pronoun
 Italian: noun adjective position country human culture italy
 Italy: noun position country italy
 Johnny: name male
-Jump: verb physical
-Kiss: verb physical emotion love
+Jump: Verb physical
+Kiss: Verb physical emotion love
 Knight: noun culture warrior human ancient
-Know: verb mental knowledge information
+Know: Verb mental knowledge information
 Knowledge: noun knowledge information
 Language: noun language social information
 Last: adjective adverb end
 Lazy: adjective physical
-Lead: noun verb control human metal element start
-Learn: verb knowledge information new
-Leave: verb position move end
-Let: verb
+Lead: noun Verb control human metal element start
+Learn: Verb knowledge information new
+Leave: Verb position move end
+Let: Verb
 Life: noun living animal plant human
-Like: verb adjective mental same
-Live: verb living animal plant human music
-Look: verb noun exclamation visual position sense
-Looks: verb noun visual position sense plural
+Like: Verb adjective mental same
+Live: Verb living animal plant human music
+Lot: noun pronoun position plural land
+Look: Verb noun exclamation visual position sense
+Looks: Verb noun visual position sense plural
 Many: pronoun plural
 Me: pronoun self human
-Mean: verb adjective information bad
+Mean: Verb adjective information bad
 Monday: noun adverb time day
 Money: noun money value
 Mood: noun emotion mental
+More: pronoun adverb plural extra
 Morning: noun adverb time day start
 Mouth: noun body living taste food sense
 My: article self human
-Name: noun verb name
-Need: verb
+Name: noun Verb name
+Need: Verb
 Nice: adjective good
 Nope: exclamation no
-Nose: noun verb body front investigate scent sense
+Nose: noun Verb body front investigate scent sense
 Not: adjective no
 Of: preposition
 One: adjective one
 Opinion: noun mental feeling human
 Orange: noun colour fruit food warm
+Order: noun Verb group human politics scale command
 Organ: noun body living
-Ought: verb duty
+Ought: Verb duty
 Over: preposition up
 Pasta: noun food italy
-Pencil: noun verb art words
+Pencil: noun Verb art words
 Pink: adjective colour bright
 Pizza: noun food italy
-Present: noun verb adjective gift happy event now time
+Present: noun Verb adjective gift happy event now time
 Problem: noun bad challenge
-Process: noun verb event mechanical chemical
-Program: noun verb event code language
+Process: noun Verb event mechanical chemical
+Program: noun Verb event code language
 Progress: noun good forward
 Purple: adjective colour cold alien
 Quick: adjective fast move
 Real: adjective exist state
 Red: adjective colour hot
 Saturday: noun adverb time day
-Say: verb social language verbal
-Said: verb social language verbal past
-Saw: noun verb visual sense past tool wood
-Scent: noun verb scent
-See: verb visual sense
+Say: Verb social language Verbal
+Said: Verb social language Verbal past
+Saw: noun Verb visual sense past tool wood
+Scent: noun Verb scent
+See: Verb visual sense
 Self: noun self
-Sense: noun verb sense
-Sensed: noun verb sense past
+Sense: noun Verb sense
+Sensed: noun Verb sense past
 Several: adjective pronoun plural
-Sight: noun verb visual sense
+Sight: noun Verb visual sense
 Since: preposition time
 Slave: noun human command
-Smell: noun verb scent sense
+Smell: noun Verb scent sense
 So: adverb amount
 Software: noun code digital
 Some: article plural
 Sorry: adjective sad emotion mental
-Sound: noun verb sound
-Speak: verb verbal social language
-State: noun verb adjective state position country
-Start: noun verb start
+Sound: noun Verb sound
+Speak: Verb Verbal social language
+State: noun Verb adjective state position country
+Start: noun Verb start
 Sunday: noun adverb time day
-Talk: noun verb verbal social language
-Talking: noun verb verbal social language present future
-Taste: noun verb taste food sense
+Talk: noun Verb Verbal social language
+Talking: noun Verb Verbal social language present future
+Taste: noun Verb taste food sense
 Technology: noun digital mechanical new
-Test: noun verb test event challenge
+Test: noun Verb test event challenge
 That: pronoun one
 The: article generic
 There: adverb position
-Think: verb mental information emotion human
+Think: Verb mental information emotion human
 This: pronoun one
 Those: pronoun plural
-Throw: verb air strength
+Throw: Verb air strength
 Thursday: noun adverb time day
-Time: noun verb time start end
+Time: noun Verb time start end
 To: preposition position
 Today: adverb noun time day now
 Tongue: noun taste food sense body muscle
 Tuesday: adverb noun time day
-Understand: verb information mental new
+Understand: Verb information mental new
 User: noun human physical
 Violet: noun adjective colour cold flower
 Vision: noun visual position sense
-Was: verb state past
+Was: Verb state past
 We: pronoun plural social
-Weather: noun verb air wet dry storm
+Weather: noun Verb air wet dry storm
 Wednesday: noun adverb time day
-Welcome: noun verb social start good
+Welcome: noun Verb social start good
 What: article question
 White: adjective time
 Why: adverb question
 Word: noun language information 
-Yellow: adjective verb colour bright
+Yellow: adjective Verb colour bright
 You: pronoun
 Your: article possession

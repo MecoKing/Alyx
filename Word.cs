@@ -27,21 +27,20 @@ namespace Alyx {
 			phonetic = Phonetic.generatePhoneticsFor (name);
 		}
 
-		// |tag = OR includes tag
-		// &tag = AND includes tag
-		// wordsTaggedFromCollection (Program.vocab, "noun", "&mammal", "&animal");
+		//Returns a collection of words that have the given tags.
+		//Add '&' to the start of a searchTag to get tags out of the previous that only have that tag
+		//i.e. noun, animal, &domestic gets all the nouns and all the animals and returns only the ones that are also domestic
+		//whereas noun, animal, domestic returns all the noun, animal and domestic words.
 		public static Word[] wordsTaggedFromCollection (Word[] collection, params string[] searchTags) {
 			List<Word> taggedWords = new List<Word> ();
 			foreach (string tag in searchTags) {
 				foreach (Word term in collection) {
-					if (tag.StartsWith ("|") || !tag.StartsWith ("&")) {
-						if (term.tags.Contains (tag.Remove (0, 1)))
+					if (tag.StartsWith ("&")) {
+						if (taggedWords.Contains (term) && !term.tags.Contains (tag.Substring (1, tag.Length - 2)))
+							taggedWords.Remove (term);
+					} else {
+						if (term.tags.Contains (tag) && !taggedWords.Contains (term))
 							taggedWords.Add (term);
-					} else if (tag.StartsWith ("&")) {
-						if (taggedWords.Contains (term)) {
-							if (!term.tags.Contains (tag.Remove (0, 1)))
-								taggedWords.Remove (term);
-						}
 					}
 				}
 			}
