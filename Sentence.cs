@@ -125,15 +125,15 @@ namespace Alyx {
 
 		public string generate () {
 			List<Word> generatedPhrase = new List<Word> ();
-			string sentenceModel = sentenceModels [new Random ().Next (sentenceModels.Length)];
+			string sentenceModel = sentenceModels [Program.rndm.Next (sentenceModels.Length)];
 			string substring = "";
 			for (int i = 0; i < sentenceModel.Length; i++) {
 				if (sentenceModel [i] == ' ' || i == sentenceModel.Length - 1) {
 					if (i == sentenceModel.Length - 1)
 						substring += sentenceModel [i];
-					Word[] taggedWords = Word.wordsTaggedFromCollection (Program.vocab.ToArray (), tags[0], tags [1], tags [2], substring);
+					Word[] taggedWords = Word.wordsTaggedFromCollection (Program.vocab.ToArray (), tags[0], tags [1], tags [2], "&"+substring);
 					if (taggedWords.Length > 0)
-						generatedPhrase.Add (taggedWords [new Random ().Next (taggedWords.Length)]);
+						generatedPhrase.Add (taggedWords [Program.rndm.Next (taggedWords.Length)]);
 					substring = "";
 				} else
 					substring += sentenceModel [i];
