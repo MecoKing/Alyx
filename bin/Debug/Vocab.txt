@@ -1,43 +1,43 @@
-A: article
-Abode: noun shelter
-Add: Verb math number
-Added: Verb math number past
+A: article generic
+Abode: noun residential
+Add: Verb math
+Added: Verb math past
 Advancement: noun
-Again: adverb
+Again: adverb past
 Alyx: name self
 Am: Verb present
-An: article
-Analysis: noun investigate information
-Analyze: verb investigate present
+An: article generic
+Analysis: noun see science math
+Analyze: verb see science math present
 Animal: noun animal living male female
-Are: Verb state present
-Baby: noun adjective human living young male female
-Back: noun adjective adverb Verb body position money
-Be: Verb state
-Been: Verb state past
+Are: Verb present
+Baby: noun adjective human living immature male female
+Back: noun adjective adverb Verb back commerce animal human
+Be: Verb abstract
+Been: Verb abstract past
 Benefit: noun positive
 Blue: adjective colour cold
 Black: adjective colour dark
-Body: noun living animal body
-Bodies: noun living animal body plural
-Boring: adjective negative no emotion
+Body: noun living animal
+Bodies: noun living animal some
+Boring: adjective negative emotional
 Brain: noun body mental living
-Break: Verb negative divide
-Broke: Verb negative divide past
-Broken: adjective negative divide
+Break: Verb negative sad
+Broke: Verb negative sad past
+Broken: adjective negative sad
 Brown: adjective colour
 By: preposition
 Can: Verb
 Cannot: Verb negative
 Cant: Verb negative
 Child: noun human young living male female
-Code: noun Verb virtual number information
-Communication: noun social language
-Conversation: noun social language
+Code: noun Verb virtual math
+Communication: noun social
+Conversation: noun social
 Could: Verb past
-Database: noun number information virtual
-Day: noun time
-Dictionary: noun information language physical
+Database: noun math virtual
+Day: noun present
+Dictionary: noun physical digital thisIsTheLastOneIDid
 Did: Verb action past
 Dirt: noun earth
 Dirty: adjective earth
