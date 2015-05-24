@@ -5,17 +5,22 @@ Added: Verb math number past
 Advancement: noun
 Again: adverb
 Alyx: name self
-Am: Verb state present
+Am: Verb present
 An: article
+Analysis: noun investigate information
+Analyze: verb investigate present
 Animal: noun animal living male female
 Are: Verb state present
 Baby: noun adjective human living young male female
+Back: noun adjective adverb Verb body position money
 Be: Verb state
+Been: Verb state past
 Benefit: noun positive
 Blue: adjective colour cold
 Black: adjective colour dark
 Body: noun living animal body
 Bodies: noun living animal body plural
+Boring: adjective negative no emotion
 Brain: noun body mental living
 Break: Verb negative divide
 Broke: Verb negative divide past
@@ -23,6 +28,7 @@ Broken: adjective negative divide
 Brown: adjective colour
 By: preposition
 Can: Verb
+Cannot: Verb negative
 Cant: Verb negative
 Child: noun human young living male female
 Code: noun Verb virtual number information
@@ -32,15 +38,20 @@ Could: Verb past
 Database: noun number information virtual
 Day: noun time
 Dictionary: noun information language physical
-Discussion: noun social language Verbal
-Do: Verb action
 Did: Verb action past
+Dirt: noun earth
+Dirty: adjective earth
+Discussion: noun social language verbal
+Do: Verb action
 Dog: noun animal living mammal canine domestic male female
+Dragon: noun animal living reptile wild hot
 Ear: noun body living sound sense
+Earth: noun large earth
 Enough: adverb measure
 Evening: noun adverb time day end
 Ever: adverb
 Eye: noun body living visual sense
+Fact: noun true information
 Family: noun collective human
 Feel: Verb mental emotion sense
 Few: adjective small number
@@ -53,6 +64,7 @@ Food: noun food taste
 For: preposition
 Fox: noun animal living mammal canine wild male female
 Friday: noun adverb time day
+Funny: adjective happy
 Get: Verb
 Give: Verb social
 Green: adjective Verb colour cold nature
@@ -78,6 +90,7 @@ Humble: adjective positive polite
 I: pronoun self human
 Improvement: noun positive
 In: adverb preposition position
+Is: verb state present
 It: pronoun
 Italian: noun adjective position country human culture italy
 Italy: noun position country italy
@@ -116,6 +129,8 @@ Nice: adjective good
 Nope: exclamation no
 Nose: noun Verb body front investigate scent sense
 Not: adjective no
+Notice: noun Verb visual investigate information
+Noticed: Verb visual investigate past
 Of: preposition
 One: adjective one
 Opinion: noun mental feeling human
@@ -123,6 +138,7 @@ Orange: noun colour fruit food warm
 Order: noun Verb group human politics scale command
 Organ: noun body living
 Ought: Verb duty
+Out: adverb position
 Over: preposition up
 Pasta: noun food italy
 Pencil: noun Verb art words
@@ -136,6 +152,7 @@ Progress: noun good forward
 Purple: adjective colour cold alien
 Quick: adjective fast move
 Real: adjective exist state
+Really: adverb exclamation true
 Red: adjective colour hot
 Saturday: noun adverb time day
 Say: Verb social language Verbal
@@ -146,6 +163,7 @@ See: Verb visual sense
 Self: noun self
 Sense: noun Verb sense
 Sensed: noun Verb sense past
+Sentence: noun language information large
 Several: adjective pronoun plural
 Sight: noun Verb visual sense
 Since: preposition time
@@ -157,6 +175,8 @@ Some: article plural
 Sorry: adjective sad emotion mental
 Sound: noun Verb sound
 Speak: Verb Verbal social language
+Spit: Verb noun negative water body past
+Spitting: Verb negative
 State: noun Verb adjective state position country
 Start: noun Verb start
 Sunday: noun adverb time day
@@ -168,21 +188,25 @@ Test: noun Verb test event challenge
 That: pronoun one
 The: article generic
 There: adverb position
+Thing: noun generic
 Think: Verb mental information emotion human
 This: pronoun one
 Those: pronoun plural
 Throw: Verb air strength
 Thursday: noun adverb time day
 Time: noun Verb time start end
+Times: noun time past
 To: preposition position
 Today: adverb noun time day now
 Tongue: noun taste food sense body muscle
 Tuesday: adverb noun time day
+Two: adjective two few
 Understand: Verb information mental new
 User: noun human physical
 Violet: noun adjective colour cold flower
 Vision: noun visual position sense
 Was: Verb state past
+Will: noun verb present emotion human
 We: pronoun plural social
 Weather: noun Verb air wet dry storm
 Wednesday: noun adverb time day
@@ -190,7 +214,8 @@ Welcome: noun Verb social start good
 What: article question
 White: adjective time
 Why: adverb question
-Word: noun language information 
+Word: noun language information
+Words: noun language information plural
 Yellow: adjective Verb colour bright
 You: pronoun
 Your: article possession
