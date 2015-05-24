@@ -119,10 +119,14 @@ namespace Alyx {
 				orderedTags.Add (frequentTag.Item1);
 			}
 			string[] tagArray = orderedTags.ToArray ();
+			if (tagArray.Length < returnCount)
+				return tagArray;
+			else {
 				List<string> returnTags = new List<string> ();
 				for (int i = 1; i <= returnCount; i++)
 					returnTags.Add (tagArray [tagArray.Length - i]);
 				return returnTags.ToArray ();
+			}
 		}
 
 		//Generates a sentence using the given tags
