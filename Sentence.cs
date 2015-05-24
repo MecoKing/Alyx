@@ -18,11 +18,14 @@ namespace Alyx {
 		//Creates a new sentence of seperate known words and frequent tags from a given phrase
 		public Sentence (string phrase) {
 			words = individualWords (reformat (phrase));
-			tags = commonTags (tagFrequencies ());
+			tags = commonTags (tagFrequencies (), 4);
 
 			foreach (Word term in words)
 				Console.Write ("{0} ", term.name);
-			Console.WriteLine ("\n{0} {1} {2}", tags [0], tags [1], tags [2]);
+			Console.WriteLine ();
+			foreach (string tag in tags)
+				Console.Write ("{0} ", tag);
+			Console.WriteLine ();
 		}
 
 		//Reformats the words in the phrase string
@@ -103,8 +106,8 @@ namespace Alyx {
 			return tagCounter;
 		}
 
-		//Returns the top three most frequent tags from the given Dictionary
-		public string[] commonTags (Dictionary<string, int> frequencies) {
+		//Returns the top <returnCount> most frequent tags from the given Dictionary
+		public string[] commonTags (Dictionary<string, int> frequencies, int returnCount) {
 			List<string> orderedTags = new List<string> ();
 			while (frequencies.Count != 0) {
 				Tuple<string, int> frequentTag = new Tuple<string, int> ("NULLTAG", 1024);
@@ -116,13 +119,13 @@ namespace Alyx {
 				orderedTags.Add (frequentTag.Item1);
 			}
 			string[] tagArray = orderedTags.ToArray ();
-			return new string[] {
-				tagArray [tagArray.Length - 1],
-				tagArray [tagArray.Length - 2],
-				tagArray [tagArray.Length - 3],
-			};
+				List<string> returnTags = new List<string> ();
+				for (int i = 1; i <= returnCount; i++)
+					returnTags.Add (tagArray [tagArray.Length - i]);
+				return returnTags.ToArray ();
 		}
 
+		//Generates a sentence using the given tags
 		public string generate () {
 			List<Word> generatedPhrase = new List<Word> ();
 			string sentenceModel = sentenceModels [Program.rndm.Next (sentenceModels.Length)];
@@ -131,7 +134,11 @@ namespace Alyx {
 				if (sentenceModel [i] == ' ' || i == sentenceModel.Length - 1) {
 					if (i == sentenceModel.Length - 1)
 						substring += sentenceModel [i];
-					Word[] taggedWords = Word.wordsTaggedFromCollection (Program.vocab.ToArray (), tags[0], tags [1], tags [2], "&"+substring);
+					List<string> searchTags = new List<string> ();
+					foreach (string tag in tags)
+						searchTags.Add (tag);
+					searchTags.Add ("&" + substring);
+					Word[] taggedWords = Word.wordsTaggedFromCollection (Program.vocab.ToArray (), searchTags.ToArray ());
 					if (taggedWords.Length > 0)
 						generatedPhrase.Add (taggedWords [Program.rndm.Next (taggedWords.Length)]);
 					substring = "";

@@ -39,7 +39,7 @@ namespace Alyx {
 						if (taggedWords.Contains (term) && !term.tags.Contains (tag.Substring (1, tag.Length - 2)))
 							taggedWords.Remove (term);
 					} else {
-						if (term.tags.Contains (tag) && !taggedWords.Contains (term))
+						if (term.tags.Contains (tag) && !taggedWords.Contains (term))//Should tags stack up if meeting more than one search?
 							taggedWords.Add (term);
 					}
 				}
