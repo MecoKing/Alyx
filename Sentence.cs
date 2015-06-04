@@ -101,7 +101,7 @@ namespace Alyx {
 						substring += word.tags [i];
 				}
 			}
-			foreach (string illegalTag in new string[] {"", "pronoun", "noun", "Verb", "adverb", "article", "preposition", "adjective"})
+			foreach (string illegalTag in new string[] {"", "pronoun", "noun", "Verb", "adverb", "article", "preposition", "adjective", "conjunction"})
 				tagCounter.Remove (illegalTag);
 			return tagCounter;
 		}

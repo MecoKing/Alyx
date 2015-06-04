@@ -4,6 +4,8 @@ Add: Verb math
 Added: Verb math past
 Advancement: noun
 Again: adverb past
+Almost: adverb small some
+Alright: adjective adverb positive
 Alyx: name self
 Am: Verb present
 An: article generic
@@ -16,6 +18,7 @@ Back: noun adjective adverb Verb back commerce animal human
 Be: Verb abstract
 Been: Verb abstract past
 Benefit: noun positive
+Bigger: adjective physical large
 Blue: adjective colour cold
 Black: adjective colour dark
 Body: noun living animal
@@ -26,6 +29,7 @@ Break: Verb negative sad
 Broke: Verb negative sad past
 Broken: adjective negative sad
 Brown: adjective colour
+Bug: noun Verb animal insect digital negative
 By: preposition
 Can: Verb
 Cannot: Verb negative
@@ -37,92 +41,96 @@ Conversation: noun social
 Could: Verb past
 Database: noun math virtual
 Day: noun present
-Dictionary: noun physical digital thisIsTheLastOneIDid
-Did: Verb action past
-Dirt: noun earth
-Dirty: adjective earth
-Discussion: noun social language verbal
-Do: Verb action
-Dog: noun animal living mammal canine domestic male female
-Dragon: noun animal living reptile wild hot
-Ear: noun body living sound sense
-Earth: noun large earth
-Enough: adverb measure
-Evening: noun adverb time day end
-Ever: adverb
-Eye: noun body living visual sense
-Fact: noun true information
-Family: noun collective human
+Dictionary: noun physical digital
+Did: Verb past generic
+Dirt: noun nature dead brown
+Dirty: adjective nature dead brown
+Discussion: noun social human language
+Do: Verb generic
+Dog: noun animal living mammal small medium brown grey black white
+Dragon: noun animal reptile hot red green
+Each: article adverb pronoun all generic
+Ear: noun living sense hear
+Earth: noun huge temperate green blue
+Enough: adverb some
+Evening: noun adverb end dim day
+Ever: adverb future
+Eye: noun living sense see
+Fact: noun true science
+Family: noun collective human social
 Feel: Verb mental emotion sense
-Few: adjective small number
-Fill: Verb measure
-Find: Verb noun visual object lost
-Found: Verb noun visual object lost past
-Follow: Verb
-Following: adjective
-Food: noun food taste
+Few: adjective few
+Fill: Verb all in
+Find: Verb noun see positive
+Found: Verb see positive past
+Follow: Verb back
+Following: adjective back
+Food: noun taste
 For: preposition
-Fox: noun animal living mammal canine wild male female
-Friday: noun adverb time day
+Fox: noun animal living mammal medium orange
+Friday: noun adverb day week end
 Funny: adjective happy
-Get: Verb
+Get: Verb material
 Give: Verb social
-Green: adjective Verb colour cold nature
-Greet: Verb social polite
-Greetings: noun exclamation social polite start formal
-Grey: adjective colour neutral
-Going: noun adjective Verb move position present future
-Good: noun adjective positive
-Goodbye: exclamation polite social end formal
-Hate: Verb emotion negative
-Have: Verb material
-Head: noun Verb body mental control
-Hear: Verb mental sound sense
-Hello: exclamation polite start formal
-Help: Verb polite positive
-Here: adverb position
-Hi: exclamation polite start informal
-Home: noun building human position domestic
+Green: adjective Verb green cold nature
+Greet: Verb social start
+Greetings: noun exclamation social start
+Grey: adjective grey neutral
+Going: noun adjective Verb out future
+Good: noun adjective positive good
+Goodbye: exclamation social end
+Hate: Verb emotion negative anger
+Have: Verb material present
+Head: noun Verb mental front
+Hear: Verb mental sense hear
+Hello: exclamation polite start
+Help: Verb positive good
+Here: adverb in present
+Hi: exclamation start positive
+Home: noun human resedential
 Horrible: adjective negative
 How: adverb question
-Human: noun adjective living social mental male female
-Humble: adjective positive polite
+Human: noun adjective living human mammal male female
+Humble: adjective positive small
 I: pronoun self human
+If: noun conjunction true math science
 Improvement: noun positive
-In: adverb preposition position
-Is: verb state present
-It: pronoun
-Italian: noun adjective position country human culture italy
-Italy: noun position country italy
+In: adverb preposition in
+Is: verb present abstract
+It: pronoun specific
+Italian: noun adjective human italy
+Italy: noun position continental italy
 Johnny: name male
-Jump: Verb physical
-Kiss: Verb physical emotion love
-Knight: noun culture warrior human ancient
-Know: Verb mental knowledge information
-Knowledge: noun knowledge information
-Language: noun language social information
+Jump: Verb physical above
+Kiss: Verb physical emotional love human animal
+Knight: noun cultural old human warrior
+Know: Verb mental true human abstract
+Knowledge: noun true generic
+Language: noun language social human
 Last: adjective adverb end
-Lazy: adjective physical
-Lead: noun Verb control human metal element start
-Learn: Verb knowledge information new
-Leave: Verb position move end
+Lazy: adjective physical negative
+Lead: noun Verb start front human
+Learn: Verb new true human
+Leave: Verb end out
 Let: Verb
 Life: noun living animal plant human
-Like: Verb adjective mental same
+Like: Verb adjective mental happy
 Live: Verb living animal plant human music
-Lot: noun pronoun position plural land
-Look: Verb noun exclamation visual position sense
-Looks: Verb noun visual position sense plural
-Many: pronoun plural
+Lot: noun pronoun municipal neutral
+Look: Verb noun exclamation sense see
+Looks: Verb noun sense see plural
+Many: pronoun many
 Me: pronoun self human
-Mean: Verb adjective information bad
-Monday: noun adverb time day
-Money: noun money value
-Mood: noun emotion mental
-More: pronoun adverb plural extra
-Morning: noun adverb time day start
-Mouth: noun body living taste food sense
-My: article self human
+Mean: Verb adjective bad negative emotional
+Meaning: noun adjective language
+Monday: noun adverb day week start
+Money: noun commerce
+Mood: noun emotional mental
+More: pronoun adverb some
+Morning: noun adverb day start
+Mouth: noun sense taste living animal
+Move: verb noun front right back left physical
+My: article self human I_LEFT_OFF_HERE_!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 Name: noun Verb name
 Need: Verb
 Nice: adjective good
@@ -131,7 +139,9 @@ Nose: noun Verb body front investigate scent sense
 Not: adjective no
 Notice: noun Verb visual investigate information
 Noticed: Verb visual investigate past
+Now: adverb conjunction present
 Of: preposition
+On: adverb preposition above
 One: adjective one
 Opinion: noun mental feeling human
 Orange: noun colour fruit food warm
@@ -159,6 +169,7 @@ Say: Verb social language Verbal
 Said: Verb social language Verbal past
 Saw: noun Verb visual sense past tool wood
 Scent: noun Verb scent
+Second: noun few present past future
 See: Verb visual sense
 Self: noun self
 Sense: noun Verb sense
@@ -173,6 +184,7 @@ So: adverb amount
 Software: noun code digital
 Some: article plural
 Sorry: adjective sad emotion mental
+Sorted: Verb past specific physical digital
 Sound: noun Verb sound
 Speak: Verb Verbal social language
 Spit: Verb noun negative water body past
@@ -189,6 +201,7 @@ That: pronoun one
 The: article generic
 There: adverb position
 Thing: noun generic
+Things: noun generic plural
 Think: Verb mental information emotion human
 This: pronoun one
 Those: pronoun plural
