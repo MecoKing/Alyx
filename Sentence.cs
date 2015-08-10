@@ -8,7 +8,8 @@ namespace Alyx {
 			//Verb tags must start with a capital or adverbs will be mistaken for verbs!
 			"article adjective adjective noun Verb adverb article adjective noun",
 			"pronoun Verb adverb",
-			"exclamation adjective preposition Verb pronoun"
+			"exclamation adjective preposition Verb pronoun",
+			"pronoun Verb adverb preposition article adjective noun"
 		};
 
 
