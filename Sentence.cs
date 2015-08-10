@@ -133,6 +133,7 @@ namespace Alyx {
 		public string generate () {
 			List<Word> generatedPhrase = new List<Word> ();
 			string sentenceModel = sentenceModels [Program.rndm.Next (sentenceModels.Length)];
+			Log.Write ("Sentence.cs", "CHECK", sentenceModel); //For testing whether the sentence model is used to fullest potential...
 			string substring = "";
 			for (int i = 0; i < sentenceModel.Length; i++) {
 				if (sentenceModel [i] == ' ' || i == sentenceModel.Length - 1) {
