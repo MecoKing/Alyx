@@ -130,25 +130,25 @@ More: pronoun adverb some
 Morning: noun adverb day start
 Mouth: noun sense taste living animal
 Move: verb noun front right back left physical
-My: article self human I_LEFT_OFF_HERE_!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+My: article self human
 Name: noun Verb name
-Need: Verb
-Nice: adjective good
-Nope: exclamation no
-Nose: noun Verb body front investigate scent sense
-Not: adjective no
-Notice: noun Verb visual investigate information
-Noticed: Verb visual investigate past
+Need: Verb physical emotional material mental
+Nice: adjective good positive
+Nope: exclamation false negative
+Nose: noun Verb front sense smell human
+Not: adjective negative false
+Notice: noun Verb specific true see
+Noticed: Verb specific true see past
 Now: adverb conjunction present
 Of: preposition
-On: adverb preposition above
-One: adjective one
-Opinion: noun mental feeling human
-Orange: noun colour fruit food warm
-Order: noun Verb group human politics scale command
-Organ: noun body living
-Ought: Verb duty
-Out: adverb position
+On: adverb preposition above physical
+One: adjective single generic
+Opinion: noun abstract human mental
+Orange: noun orange taste small
+Order: noun Verb specific politics language human material social
+Organ: noun feel small animal human living physical
+Ought: Verb good question present past
+Out: adverb out THIS_IS_WHERE_I_LEFT_OFF——————————————————————————————————————————————————
 Over: preposition up
 Pasta: noun food italy
 Pencil: noun Verb art words
