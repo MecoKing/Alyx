@@ -12,6 +12,7 @@ namespace Alyx {
 			}
 		}
 
+		//Clear the Debug file and rewrite the current date and time
 		public static void Clear () {
 			using (StreamWriter writer = new StreamWriter ("Debug.txt", false)) {
 				writer.WriteLine (DateTime.Now);

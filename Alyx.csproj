@@ -8,8 +8,6 @@
     <RootNamespace>Alyx</RootNamespace>
     <AssemblyName>Alyx</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +39,7 @@
     <Compile Include="Phonetic.cs" />
     <Compile Include="Sentence.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="Tests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

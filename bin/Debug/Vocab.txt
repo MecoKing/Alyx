@@ -10,7 +10,7 @@ Alyx: name self
 Am: Verb present
 An: article generic
 Analysis: noun see science math
-Analyze: verb see science math present
+Analyze: Verb see science math present
 Animal: noun animal living male female
 Are: Verb present
 Baby: noun adjective human living immature male female
@@ -19,16 +19,16 @@ Be: Verb abstract
 Been: Verb abstract past
 Benefit: noun positive
 Bigger: adjective physical large
-Blue: adjective colour cold
-Black: adjective colour dark
+Blue: adjective blue cold
+Black: adjective black dark
 Body: noun living animal
 Bodies: noun living animal some
 Boring: adjective negative emotional
-Brain: noun body mental living
+Brain: noun mental living
 Break: Verb negative sad
 Broke: Verb negative sad past
 Broken: adjective negative sad
-Brown: adjective colour
+Brown: adjective brown
 Bug: noun Verb animal insect digital negative
 By: preposition
 Can: Verb
@@ -58,7 +58,7 @@ Ever: adverb future
 Eye: noun living sense see
 Fact: noun true science
 Family: noun collective human social
-Feel: Verb mental emotion sense
+Feel: Verb mental emotional physical sense
 Few: adjective few
 Fill: Verb all in
 Find: Verb noun see positive
@@ -79,15 +79,15 @@ Grey: adjective grey neutral
 Going: noun adjective Verb out future
 Good: noun adjective positive good
 Goodbye: exclamation social end
-Hate: Verb emotion negative anger
+Hate: Verb emotional negative anger
 Have: Verb material present
 Head: noun Verb mental front
 Hear: Verb mental sense hear
-Hello: exclamation polite start
+Hello: exclamation social positive start
 Help: Verb positive good
 Here: adverb in present
 Hi: exclamation start positive
-Home: noun human resedential
+Home: noun human residential
 Horrible: adjective negative
 How: adverb question
 Human: noun adjective living human mammal male female
@@ -96,10 +96,10 @@ I: pronoun self human
 If: noun conjunction true math science
 Improvement: noun positive
 In: adverb preposition in
-Is: verb present abstract
+Is: Verb present abstract
 It: pronoun specific
 Italian: noun adjective human italy
-Italy: noun position continental italy
+Italy: noun continental italy
 Johnny: name male
 Jump: Verb physical above
 Kiss: Verb physical emotional love human animal
@@ -129,8 +129,8 @@ Mood: noun emotional mental
 More: pronoun adverb some
 Morning: noun adverb day start
 Mouth: noun sense taste living animal
-Move: verb noun front right back left physical
-My: article self human
+Move: Verb noun front right back left physical
+My: article self human possession
 Name: noun Verb name
 Need: Verb physical emotional material mental
 Nice: adjective good positive
@@ -148,87 +148,87 @@ Orange: noun orange taste small
 Order: noun Verb specific politics language human material social
 Organ: noun feel small animal human living physical
 Ought: Verb good question present past
-Out: adverb out THIS_IS_WHERE_I_LEFT_OFF——————————————————————————————————————————————————
-Over: preposition up
-Pasta: noun food italy
-Pencil: noun Verb art words
-Pink: adjective colour bright
-Pizza: noun food italy
-Present: noun Verb adjective gift happy event now time
-Problem: noun bad challenge
-Process: noun Verb event mechanical chemical
-Program: noun Verb event code language
-Progress: noun good forward
-Purple: adjective colour cold alien
-Quick: adjective fast move
-Real: adjective exist state
+Out: adverb out
+Over: adverb preposition above end
+Pasta: noun taste physical italy
+Pencil: noun Verb art language small physical
+Pink: adjective pink bright love
+Pizza: noun taste italy
+Present: noun Verb adjective happy present
+Problem: noun negative math abstract bad
+Process: noun Verb physical science math specific
+Program: noun Verb digital language math
+Progress: noun positive new good
+Purple: adjective violet dark cold alien
+Quick: adjective physical mental
+Real: adjective true present
 Really: adverb exclamation true
-Red: adjective colour hot
-Saturday: noun adverb time day
-Say: Verb social language Verbal
-Said: Verb social language Verbal past
-Saw: noun Verb visual sense past tool wood
-Scent: noun Verb scent
-Second: noun few present past future
-See: Verb visual sense
+Red: adjective red hot anger
+Saturday: noun adverb day week end
+Say: Verb social language human music
+Said: Verb social language human music past
+Saw: noun Verb see past material animal
+Scent: noun Verb smell specific
+Second: noun few present past future second
+See: Verb see material animal
 Self: noun self
-Sense: noun Verb sense
-Sensed: noun Verb sense past
-Sentence: noun language information large
-Several: adjective pronoun plural
-Sight: noun Verb visual sense
-Since: preposition time
-Slave: noun human command
-Smell: noun Verb scent sense
-So: adverb amount
-Software: noun code digital
-Some: article plural
-Sorry: adjective sad emotion mental
+Sense: noun Verb sense feel
+Sensed: Verb sense feel past
+Sentence: noun language abstract social
+Several: adjective pronoun many
+Sight: noun Verb see sense
+Since: preposition past present specific
+Slave: noun Verb human bad politics
+Smell: noun Verb smell sense animal
+So: adverb many
+Software: noun digital math commercial
+Some: article some
+Sorry: adjective sad emotional positive
 Sorted: Verb past specific physical digital
-Sound: noun Verb sound
-Speak: Verb Verbal social language
-Spit: Verb noun negative water body past
-Spitting: Verb negative
-State: noun Verb adjective state position country
+Sound: noun Verb hear music
+Speak: Verb social language hear
+Spit: Verb noun negative past taste
+Spitting: Verb negative taste
+State: noun Verb adjective present politics physical
 Start: noun Verb start
-Sunday: noun adverb time day
-Talk: noun Verb Verbal social language
-Talking: noun Verb Verbal social language present future
-Taste: noun Verb taste food sense
-Technology: noun digital mechanical new
-Test: noun Verb test event challenge
-That: pronoun one
+Sunday: noun adverb day week end
+Talk: noun Verb social language
+Talking: noun Verb social language present future
+Taste: noun Verb taste sense positive
+Technology: noun digital new physical
+Test: noun Verb specific math science true false question
+That: pronoun single specific out
 The: article generic
-There: adverb position
+There: adverb specific out
 Thing: noun generic
 Things: noun generic plural
-Think: Verb mental information emotion human
-This: pronoun one
-Those: pronoun plural
-Throw: Verb air strength
-Thursday: noun adverb time day
-Time: noun Verb time start end
-Times: noun time past
-To: preposition position
-Today: adverb noun time day now
-Tongue: noun taste food sense body muscle
-Tuesday: adverb noun time day
-Two: adjective two few
-Understand: Verb information mental new
-User: noun human physical
-Violet: noun adjective colour cold flower
-Vision: noun visual position sense
-Was: Verb state past
-Will: noun verb present emotion human
-We: pronoun plural social
-Weather: noun Verb air wet dry storm
-Wednesday: noun adverb time day
-Welcome: noun Verb social start good
+Think: Verb mental animal human
+This: pronoun single physical specific
+Those: pronoun plural specific
+Throw: Verb physical human
+Thursday: noun adverb day week
+Time: noun Verb start end
+Times: noun past plural
+To: preposition front
+Today: adverb noun day specific present
+Tongue: noun taste sense
+Tuesday: adverb noun day week start
+Two: adjective few plural
+Understand: Verb mental new
+User: noun human physical specific
+Violet: noun adjective cold violet plant
+Vision: noun sense see art
+Was: Verb past
+Will: noun Verb future emotional human
+We: pronoun plural social self
+Weather: noun Verb temperate cold warm hot
+Wednesday: noun adverb day week
+Welcome: noun Verb social start positive
 What: article question
-White: adjective time
+White: adjective white cold good
 Why: adverb question
-Word: noun language information
-Words: noun language information plural
-Yellow: adjective Verb colour bright
-You: pronoun
-Your: article possession
+Word: noun language small
+Words: noun language small plural
+Yellow: adjective Verb yellow bright
+You: pronoun self
+Your: article possession self
