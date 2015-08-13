@@ -7,9 +7,10 @@ namespace Alyx {
 		string[] sentenceModels = new string[] {
 			//Verb tags must start with a capital or adverbs will be mistaken for verbs!
 			"article adjective adjective noun Verb adverb article adjective noun",
-			"pronoun Verb adverb",
+			"pronoun adverb adjective noun adverb Verb adjective noun",
+			"pronoun Verb adverb preposition article adjective noun",
 			"exclamation adjective preposition Verb pronoun",
-			"pronoun Verb adverb preposition article adjective noun"
+			"pronoun Verb adverb",
 		};
 
 
@@ -102,7 +103,7 @@ namespace Alyx {
 						substring += word.tags [i];
 				}
 			}
-			foreach (string illegalTag in new string[] {"", "pronoun", "noun", "Verb", "adverb", "article", "preposition", "adjective", "conjunction"})
+			foreach (string illegalTag in new string[] {"", "pronoun", "noun", "Verb", "adverb", "article", "preposition", "adjective", "conjunction", "question"})
 				tagCounter.Remove (illegalTag);
 			return tagCounter;
 		}

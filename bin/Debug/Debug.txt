@@ -1,3 +1,4 @@
-2015-08-09 10:56:31 PM
-[Program.cs, GENERAL]: All file loading methods have completed their tasks captain!
-[Sentence.cs, CHECK]: pronoun Verb adverb preposition article adjective noun
+2015-08-12 8:41:52 PM
+[Program.cs, Info]: All file loading methods have completed their tasks captain!
+[Program.cs, INFO]: All tests have completed testing...
+[Sentence.cs, CHECK]: pronoun adverb adjective noun adverb Verb adjective noun
