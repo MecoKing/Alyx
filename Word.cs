@@ -67,10 +67,29 @@ namespace Alyx {
 			}
 		}
 
+		//adds unknown terms to the list of words that need to be added
 		public static void addUnknown (string term) {
 			using (StreamWriter writer = new StreamWriter ("UnknownWords.txt", true)) {
 				writer.WriteLine (term);
 			}
+		}
+
+		public string[] getTags () {
+			List<string> myTags = new List<string> ();
+			string individual = ""; 
+			for (int i = 0; i < tags.Length; i++) {
+				if (tags [i] == ' ') {
+					if (individual != "")
+						myTags.Add (individual);
+					individual = "";
+				} else if (i == tags.Length - 1) {
+					individual += tags [i];
+					myTags.Add (individual);
+					individual = "";
+				} else
+					individual += tags [i];
+			}
+			return myTags.ToArray ();
 		}
 
 	}
