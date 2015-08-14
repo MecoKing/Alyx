@@ -11,6 +11,7 @@ Am: Verb present
 An: article generic
 Analysis: noun see science math
 Analyze: Verb see science math present
+And: conjunction generic
 Animal: noun animal living male female
 Are: Verb present
 Baby: noun adjective human living immature male female
@@ -55,6 +56,7 @@ Earth: noun huge temperate green blue
 Enough: adverb some
 Evening: noun adverb end dim day
 Ever: adverb future
+Exactly: adverb specific true exclamation
 Eye: noun living sense see
 Fact: noun true science
 Family: noun collective human social
@@ -96,6 +98,7 @@ I: pronoun self human
 If: noun conjunction true math science
 Improvement: noun positive
 In: adverb preposition in
+Interesting: adjective happy entertainment mental
 Is: Verb present abstract
 It: pronoun specific
 Italian: noun adjective human italy
@@ -123,6 +126,7 @@ Many: pronoun many
 Me: pronoun self human
 Mean: Verb adjective bad negative emotional
 Meaning: noun adjective language
+Micah: name male human spiritual
 Monday: noun adverb day week start
 Money: noun commerce
 Mood: noun emotional mental
@@ -150,6 +154,7 @@ Organ: noun feel small animal human living physical
 Ought: Verb good question present past
 Out: adverb out
 Over: adverb preposition above end
+Own: Verb adjective pronoun possession human 
 Pasta: noun taste physical italy
 Pencil: noun Verb art language small physical
 Pink: adjective pink bright love
@@ -163,7 +168,9 @@ Purple: adjective violet dark cold alien
 Quick: adjective physical mental
 Real: adjective true present
 Really: adverb exclamation true
+Recognize: Verb true see human mental past
 Red: adjective red hot anger
+Right: noun Verb adverb adjective good true right
 Saturday: noun adverb day week end
 Say: Verb social language human music
 Said: Verb social language human music past
