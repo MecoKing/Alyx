@@ -1,4 +1,3 @@
-2015-08-12 8:41:52 PM
+2015-08-14 1:51:21 PM
 [Program.cs, Info]: All file loading methods have completed their tasks captain!
 [Program.cs, INFO]: All tests have completed testing...
-[Sentence.cs, CHECK]: pronoun adverb adjective noun adverb Verb adjective noun

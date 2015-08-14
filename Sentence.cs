@@ -28,6 +28,9 @@ namespace Alyx {
 			foreach (string tag in tags)
 				Console.Write ("{0} ", tag);
 			Console.WriteLine ();
+				foreach (Word term in words)
+					Console.Write ("{0} ", term.phonetic);
+				Console.WriteLine ();
 		}
 
 		//Reformats the words in the phrase string
