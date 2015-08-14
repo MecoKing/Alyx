@@ -22,15 +22,17 @@ namespace Alyx {
 			words = individualWords (reformat (phrase));
 			tags = commonTags (tagFrequencies (), 4);
 
-			foreach (Word term in words)
-				Console.Write ("{0} ", term.name);
-			Console.WriteLine ();
-			foreach (string tag in tags)
-				Console.Write ("{0} ", tag);
-			Console.WriteLine ();
+			if (Program.showAnalysis) {
+				foreach (Word term in words)
+					Console.Write ("{0} ", term.name);
+				Console.WriteLine ();
 				foreach (Word term in words)
 					Console.Write ("{0} ", term.phonetic);
 				Console.WriteLine ();
+				foreach (string tag in tags)
+					Console.Write ("{0} ", tag);
+				Console.WriteLine ();
+			}
 		}
 
 		//Reformats the words in the phrase string
@@ -138,7 +140,8 @@ namespace Alyx {
 		public string generate () {
 			List<Word> generatedPhrase = new List<Word> ();
 			string sentenceModel = sentenceModels [Program.rndm.Next (sentenceModels.Length)];
-			Log.Write ("Sentence.cs", "CHECK", sentenceModel); //For testing whether the sentence model is used to fullest potential...
+			if (Program.showAnalysis)
+				Console.WriteLine (sentenceModel);
 			string substring = "";
 			for (int i = 0; i < sentenceModel.Length; i++) {
 				if (sentenceModel [i] == ' ' || i == sentenceModel.Length - 1) {

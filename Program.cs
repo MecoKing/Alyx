@@ -4,6 +4,9 @@ using System.Collections.Generic;
 namespace Alyx { //Protector of Humanity
 	class Program {
 
+		//SETTINGS:
+		public static bool showAnalysis = false;
+
 		public static List<Word> vocab = new List<Word> ();
 		public static Random rndm = new Random ();
 
@@ -15,6 +18,7 @@ namespace Alyx { //Protector of Humanity
 			Log.Write ("Program.cs", "Info", "All file loading methods have completed their tasks captain!");
 			Test.runAllTests ();
 			Log.Write ("Program.cs", "INFO", "All tests have completed testing...");
+
 			//Write a polite welcome
 			Console.WriteLine ("Hello I am Alyx, a unique syntax based chatbot!\n");
 		}
