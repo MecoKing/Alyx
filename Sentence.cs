@@ -75,15 +75,8 @@ namespace Alyx {
 			string nonWordChars = " ,.?:;!";
 			string substring = "";
 			for (int i = 0; i < phrase.Length; i++) {
-				if (nonWordChars.Contains (phrase [i].ToString ())) {
-					Word newTerm = Word.fromCollection (substring, Program.vocab.ToArray ());
-					if (newTerm != null)
-						terms.Add (newTerm);
-					else
-						Word.addUnknown (substring);
-					substring = "";
-				} else if (i == phrase.Length - 1) {
-					substring += phrase [i];
+				if (nonWordChars.Contains (phrase [i].ToString ()) || i == phrase.Length - 1) {
+					if (i == phrase.Length - 1) { substring += phrase [i]; }
 					Word newTerm = Word.fromCollection (substring, Program.vocab.ToArray ());
 					if (newTerm != null)
 						terms.Add (newTerm);
