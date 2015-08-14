@@ -38,8 +38,11 @@
     <Compile Include="Word.cs" />
     <Compile Include="Phonetic.cs" />
     <Compile Include="Sentence.cs" />
-    <Compile Include="Log.cs" />
-    <Compile Include="Tests.cs" />
+    <Compile Include="Background\Log.cs" />
+    <Compile Include="Background\Tests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Background\" />
+  </ItemGroup>
 </Project>
