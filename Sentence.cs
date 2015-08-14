@@ -99,27 +99,19 @@ namespace Alyx {
 		//Determines the frequency of tags showing up in the words array
 		public Dictionary<string, int> tagFrequencies () {
 			Dictionary <string, int> tagCounter = new Dictionary<string, int> ();
+			//For every tag in every word in the known words list
 			foreach (Word word in words) {
-				string substring = "";
-				for (int i = 0; i < word.tags.Length; i++) {
-					if (word.tags [i] == ' ') {
-						if (tagCounter.ContainsKey (substring))
-							tagCounter [substring]++;
-						else
-							tagCounter.Add (substring, 1);
-						substring = "";
-					} else if (i == word.tags.Length - 1) {
-						substring += word.tags [i];
-						if (tagCounter.ContainsKey (substring))
-							tagCounter [substring]++;
-						else
-							tagCounter.Add (substring, 1);
-						substring = "";
-					} else
-						substring += word.tags [i];
-				}
+				foreach (string tag in word.getTags ()) {
+					//If the tag has already appeared, add 1 to its frequency
+					if (tagCounter.ContainsKey (tag))
+						tagCounter [tag]++;
+					//Otherwise, add it as a new tag with a frequency of 1
+					else
+						tagCounter.Add (tag, 1);
+					}
 			}
-			foreach (string illegalTag in new string[] {"", "pronoun", "noun", "Verb", "adverb", "article", "preposition", "adjective", "conjunction", "question"})
+			//Remove any tags we don't want from the list of frequent tags...
+			foreach (string illegalTag in new string[] {"", "pronoun", "noun", "Verb", "adverb", "article", "preposition", "adjective", "conjunction", "question", "command"})
 				tagCounter.Remove (illegalTag);
 			return tagCounter;
 		}
