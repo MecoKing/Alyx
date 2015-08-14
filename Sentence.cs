@@ -17,6 +17,17 @@ namespace Alyx {
 		public Word[] words;
 		public string[] tags;
 
+		public string[] allTags { get {
+				List<string> tagsInWords = new List<string> ();
+				foreach (Word term in words) {
+					foreach (string tag in term.getTags ()) {
+						if (!tagsInWords.Contains (tag)) { tagsInWords.Add (tag) }
+					}
+				}
+				return tagsInWords.ToArray ();
+			}
+		}
+
 		//Creates a new sentence of seperate known words and frequent tags from a given phrase
 		public Sentence (string phrase) {
 			words = individualWords (reformat (phrase));
