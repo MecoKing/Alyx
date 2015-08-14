@@ -1,4 +1,5 @@
 A: article generic
+Able: adjective positive physical mental
 Abode: noun residential
 Add: Verb math
 Added: Verb math past
@@ -19,6 +20,7 @@ Back: noun adjective adverb Verb back commerce animal human
 Be: Verb abstract
 Been: Verb abstract past
 Benefit: noun positive
+Between: adverb preposition specific in neutral
 Bigger: adjective physical large
 Blue: adjective blue cold
 Black: adjective black dark
@@ -27,6 +29,8 @@ Bodies: noun living animal some
 Boring: adjective negative emotional
 Brain: noun mental living
 Break: Verb negative sad
+Brief: adjective Verb minute politics small 
+Brilliant: adjective bright positive happy big warm mental
 Broke: Verb negative sad past
 Broken: adjective negative sad
 Brown: adjective brown
@@ -57,6 +61,7 @@ Enough: adverb some
 Evening: noun adverb end dim day
 Ever: adverb future
 Exactly: adverb specific true exclamation
+Expand: Verb big large business hot physical
 Eye: noun living sense see
 Fact: noun true science
 Family: noun collective human social
@@ -72,6 +77,7 @@ For: preposition
 Fox: noun animal living mammal medium orange
 Friday: noun adverb day week end
 Funny: adjective happy
+Generate: Verb new abstract science physical digital
 Get: Verb material
 Give: Verb social
 Green: adjective Verb green cold nature
@@ -119,7 +125,7 @@ Let: Verb
 Life: noun living animal plant human
 Like: Verb adjective mental happy
 Live: Verb living animal plant human music
-Lot: noun pronoun municipal neutral
+Lot: noun pronoun municipal neutral many
 Look: Verb noun exclamation sense see
 Looks: Verb noun sense see plural
 Many: pronoun many
@@ -137,6 +143,7 @@ Move: Verb noun front right back left physical
 My: article self human possession
 Name: noun Verb name
 Need: Verb physical emotional material mental
+New: adjective adverb new positive happy industrial future
 Nice: adjective good positive
 Nope: exclamation false negative
 Nose: noun Verb front sense smell human
@@ -153,6 +160,7 @@ Order: noun Verb specific politics language human material social
 Organ: noun feel small animal human living physical
 Ought: Verb good question present past
 Out: adverb out
+Outside: noun adjective adverb preposition out planetary living nature physical
 Over: adverb preposition above end
 Own: Verb adjective pronoun possession human 
 Pasta: noun taste physical italy
@@ -182,6 +190,7 @@ Self: noun self
 Sense: noun Verb sense feel
 Sensed: Verb sense feel past
 Sentence: noun language abstract social
+Sentences: noun language abstract social plural
 Several: adjective pronoun many
 Sight: noun Verb see sense
 Since: preposition past present specific
@@ -193,7 +202,9 @@ Some: article some
 Sorry: adjective sad emotional positive
 Sorted: Verb past specific physical digital
 Sound: noun Verb hear music
+Space: noun Verb neutral dark out galactic universal large huge dead cold
 Speak: Verb social language hear
+Spent: adjective Verb past commercial material
 Spit: Verb noun negative past taste
 Spitting: Verb negative taste
 State: noun Verb adjective present politics physical
@@ -225,6 +236,8 @@ Understand: Verb mental new
 User: noun human physical specific
 Violet: noun adjective cold violet plant
 Vision: noun sense see art
+Vocabulary: noun some language collective human social
+Wait: Verb noun minute hour present future
 Was: Verb past
 Will: noun Verb future emotional human
 We: pronoun plural social self
