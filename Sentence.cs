@@ -4,8 +4,8 @@ using System.Collections.Generic;
 namespace Alyx {
 	public class Sentence {
 
+		string[] illegalTags = new string[] {"", "pronoun", "noun", "Verb", "adverb", "article", "preposition", "adjective", "conjunction", "question", "command"};
 		string[] sentenceModels = new string[] {
-			//Verb tags must start with a capital or adverbs will be mistaken for verbs!
 			"article adjective adjective noun Verb adverb article adjective noun",
 			"pronoun adverb adjective noun adverb Verb adjective noun",
 			"pronoun Verb adverb preposition article adjective noun",
@@ -13,11 +13,21 @@ namespace Alyx {
 			"pronoun Verb adverb",
 		};
 
-
 		public Word[] words;
 		public string[] tags;
 
-		//Creates a new sentence of seperate known words and frequent tags from a given phrase
+		public string[] allTags { get {
+				List<string> tagsInWords = new List<string> ();
+				foreach (Word term in words) {
+					foreach (string tag in term.getTags) {
+						if (!tagsInWords.Contains (tag)) { tagsInWords.Add (tag); }
+					}
+				}
+				return tagsInWords.ToArray ();
+			}
+		}
+
+		/// <summary>  Analyzes a written sentence seperating it into individual words and tags.  </summary>
 		public Sentence (string phrase) {
 			words = individualWords (reformat (phrase));
 			tags = commonTags (tagFrequencies (), 4);
@@ -35,9 +45,7 @@ namespace Alyx {
 			}
 		}
 
-		//Reformats the words in the phrase string
-		//    Switches capitals so the computer can read
-		//    Removes illegal characters
+		/// <summary> Reformats the way the sentence is written to make it computer readable. </summary>
 		public string reformat (string phrase) {
 			string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 			string abc = "abcdefghijklmnopqrstuvwxyz";
@@ -57,23 +65,18 @@ namespace Alyx {
 			return formatted;
 		}
 
-		//Seperates the phrase into a collection of known words.
-		//Ignores unknown words.
+		/// <summary> Seperates the phrase into a list of KNOWN words. </summary>
 		public Word[] individualWords (string phrase) {
 			List<Word> terms = new List<Word> ();
 			string nonWordChars = " ,.?:;!";
 			string substring = "";
 			for (int i = 0; i < phrase.Length; i++) {
-				if (nonWordChars.Contains (phrase [i].ToString ())) {
+				//If reached the end of a word
+				if (nonWordChars.Contains (phrase [i].ToString ()) || i == phrase.Length - 1) {
+					if (i == phrase.Length - 1) { substring += phrase [i]; }
+					//Try and get the word from the list of vocabulary
 					Word newTerm = Word.fromCollection (substring, Program.vocab.ToArray ());
-					if (newTerm != null)
-						terms.Add (newTerm);
-					else
-						Word.addUnknown (substring);
-					substring = "";
-				} else if (i == phrase.Length - 1) {
-					substring += phrase [i];
-					Word newTerm = Word.fromCollection (substring, Program.vocab.ToArray ());
+					//If it exists add it as a word in the sentence
 					if (newTerm != null)
 						terms.Add (newTerm);
 					else
@@ -85,35 +88,28 @@ namespace Alyx {
 			return terms.ToArray ();
 		}
 
-		//Determines the frequency of tags showing up in the words array
+		/// <summary> Detemines the frequency of tags shown in the words array </summary>
 		public Dictionary<string, int> tagFrequencies () {
 			Dictionary <string, int> tagCounter = new Dictionary<string, int> ();
+			//For every tag in every word in the known words list
 			foreach (Word word in words) {
-				string substring = "";
-				for (int i = 0; i < word.tags.Length; i++) {
-					if (word.tags [i] == ' ') {
-						if (tagCounter.ContainsKey (substring))
-							tagCounter [substring]++;
-						else
-							tagCounter.Add (substring, 1);
-						substring = "";
-					} else if (i == word.tags.Length - 1) {
-						substring += word.tags [i];
-						if (tagCounter.ContainsKey (substring))
-							tagCounter [substring]++;
-						else
-							tagCounter.Add (substring, 1);
-						substring = "";
-					} else
-						substring += word.tags [i];
-				}
+				foreach (string tag in word.getTags) {
+					//If the tag has already appeared, add 1 to its frequency
+					if (tagCounter.ContainsKey (tag))
+						tagCounter [tag]++;
+					//Otherwise, add it as a new tag with a frequency of 1
+					else
+						tagCounter.Add (tag, 1);
+					}
 			}
-			foreach (string illegalTag in new string[] {"", "pronoun", "noun", "Verb", "adverb", "article", "preposition", "adjective", "conjunction", "question"})
+			//Remove any tags we don't want from the list of frequent tags...
+			foreach (string illegalTag in illegalTags)
 				tagCounter.Remove (illegalTag);
 			return tagCounter;
 		}
 
-		//Returns the top <returnCount> most frequent tags from the given Dictionary
+		/// <summary> Returns the most frequent tags from a list of frequencies. </summary>
+		/// <param name="returnCount">The number of frequent tags to return.</param>
 		public string[] commonTags (Dictionary<string, int> frequencies, int returnCount) {
 			List<string> orderedTags = new List<string> ();
 			while (frequencies.Count != 0) {
@@ -136,7 +132,7 @@ namespace Alyx {
 			}
 		}
 
-		//Generates a sentence using the given tags
+		/// <summary> Generates a new sentence from the analyzed words and tags. </summary>
 		public string generate () {
 			List<Word> generatedPhrase = new List<Word> ();
 			string sentenceModel = sentenceModels [Program.rndm.Next (sentenceModels.Length)];

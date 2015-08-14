@@ -21,7 +21,7 @@ namespace Alyx {
 				"italy",
 			};
 			foreach (Word term in Program.vocab) {
-				foreach (string tag in term.getTags ()) {
+				foreach (string tag in term.getTags) {
 					bool tagIsLegal = false;
 					foreach (string legal in legalTags) {
 						if (tag == legal) {

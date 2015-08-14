@@ -9,6 +9,25 @@ namespace Alyx {
 		public string tags;
 		public string phonetic;
 
+		public string[] getTags { get {
+				List<string> myTags = new List<string> ();
+				string individual = ""; 
+				for (int i = 0; i < tags.Length; i++) {
+					if (tags [i] == ' ') {
+						if (individual != "")
+							myTags.Add (individual);
+						individual = "";
+					} else if (i == tags.Length - 1) {
+						individual += tags [i];
+						myTags.Add (individual);
+						individual = "";
+					} else
+						individual += tags [i];
+				}
+				return myTags.ToArray ();
+			}
+		}
+
 		//A script will look like this:
 		//    name: tag anotherTag thirdTag moarTags
 		public Word (string script) {
@@ -74,23 +93,7 @@ namespace Alyx {
 			}
 		}
 
-		public string[] getTags () {
-			List<string> myTags = new List<string> ();
-			string individual = ""; 
-			for (int i = 0; i < tags.Length; i++) {
-				if (tags [i] == ' ') {
-					if (individual != "")
-						myTags.Add (individual);
-					individual = "";
-				} else if (i == tags.Length - 1) {
-					individual += tags [i];
-					myTags.Add (individual);
-					individual = "";
-				} else
-					individual += tags [i];
-			}
-			return myTags.ToArray ();
-		}
+
 
 	}
 }
