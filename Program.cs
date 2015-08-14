@@ -15,7 +15,7 @@ namespace Alyx { //Protector of Humanity
 			//Clear the log load the vocabulary and write a message to the debug log
 			Log.Clear ();
 			Word.loadWords ();
-			Log.Write ("Program.cs", "Info", "All file loading methods have completed their tasks captain!");
+			Log.Write ("Program.cs", "INFO", "All file loading methods have completed their tasks captain!");
 			Test.runAllTests ();
 			Log.Write ("Program.cs", "INFO", "All tests have completed testing...");
 

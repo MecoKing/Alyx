@@ -20,8 +20,8 @@ namespace Alyx {
 		public string[] allTags { get {
 				List<string> tagsInWords = new List<string> ();
 				foreach (Word term in words) {
-					foreach (string tag in term.getTags ()) {
-						if (!tagsInWords.Contains (tag)) { tagsInWords.Add (tag) }
+					foreach (string tag in term.getTags) {
+						if (!tagsInWords.Contains (tag)) { tagsInWords.Add (tag); }
 					}
 				}
 				return tagsInWords.ToArray ();
@@ -101,7 +101,7 @@ namespace Alyx {
 			Dictionary <string, int> tagCounter = new Dictionary<string, int> ();
 			//For every tag in every word in the known words list
 			foreach (Word word in words) {
-				foreach (string tag in word.getTags ()) {
+				foreach (string tag in word.getTags) {
 					//If the tag has already appeared, add 1 to its frequency
 					if (tagCounter.ContainsKey (tag))
 						tagCounter [tag]++;
