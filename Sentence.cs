@@ -144,6 +144,10 @@ namespace Alyx {
 					Word[] taggedWords = Word.wordsTaggedFromCollection (Program.vocab.ToArray (), searchTags.ToArray ());
 					if (taggedWords.Length > 0)
 						generatedPhrase.Add (taggedWords [Program.rndm.Next (taggedWords.Length)]);
+					else {
+						taggedWords = Word.wordsTaggedFromCollection (Program.vocab.ToArray (), substring);
+						generatedPhrase.Add (taggedWords [Program.rndm.Next (taggedWords.Length)]);
+					}
 					substring = "";
 				} else
 					substring += sentenceModel [i];
