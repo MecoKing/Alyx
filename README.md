@@ -10,7 +10,8 @@ The algorithm focuses mainly on 4 categories: Language, Knowledge, Philosophy an
 Language:
 - Alyx CAN divide sentences into individual words
 - Alyx CAN discern the main idea of a sentence by counting tags attached to words
-- Alyx WILL be able to recreate its own sentences based on tags from the previous sentence
+- Alyx CAN recreate its own sentences based on tags from the previous sentence
+- Alyx CAN generate sentence structures using a modified markov chain
 
 Knowledge:
 - Alyx WILL be able to answer questions based on keywords
