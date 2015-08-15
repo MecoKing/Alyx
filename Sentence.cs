@@ -5,13 +5,6 @@ namespace Alyx {
 	public class Sentence {
 
 		string[] illegalTags = new string[] {"", "pronoun", "noun", "Verb", "adverb", "article", "preposition", "adjective", "conjunction", "question", "command"};
-		string[] sentenceModels = new string[] {
-			"article adjective adjective noun Verb adverb article adjective noun",
-			"pronoun adverb adjective noun adverb Verb adjective noun",
-			"pronoun Verb adverb preposition article adjective noun",
-			"exclamation adjective preposition Verb pronoun",
-			"pronoun Verb adverb",
-		};
 
 		public Word[] words;
 		public string[] tags;
@@ -135,7 +128,8 @@ namespace Alyx {
 		/// <summary> Generates a new sentence from the analyzed words and tags. </summary>
 		public string generate () {
 			List<Word> generatedPhrase = new List<Word> ();
-			string sentenceModel = sentenceModels [Program.rndm.Next (sentenceModels.Length)];
+//			string sentenceModel = sentenceModels [Program.rndm.Next (sentenceModels.Length)];
+			string sentenceModel = generateSentenceModel ();
 			if (Program.showAnalysis)
 				Console.WriteLine (sentenceModel);
 			string substring = "";
@@ -158,6 +152,32 @@ namespace Alyx {
 			foreach (Word term in generatedPhrase)
 				phrase += term.name + " ";
 			return phrase;
+		}
+
+		/// <summary> Generates a model to create a sentence with. </summary>
+		public string generateSentenceModel () {
+			Dictionary<string, string[]> likelyTypes = new Dictionary<string, string[]> () {
+				{ "article", new string[] { "adjective", "adjective", "noun" } },
+				{ "pronoun", new string[] { "adverb", "adverb", "Verb" } },
+				{ "adjective", new string[] { "adjective", "noun", "noun" } },
+				{ "adverb", new string[] { "adverb", "Verb", "Verb" } },
+				{ "noun", new string[] { "adverb", "adverb", "Verb" } },
+				{ "Verb", new string[] { "preposition", "preposition", "conjunction", "article", "article", "article", "pronoun" } },
+				{ "preposition", new string[] { "article", "article", "pronoun" } },
+				{ "conjunction", new string[] { "pronoun", "article", "article" } },
+			};
+			string model = "";
+			bool endSentence = false;
+			string currentType = (Program.rndm.Next (2) == 0) ? "article" : "pronoun";
+			while (!endSentence) {
+				model += currentType + " ";
+				currentType = likelyTypes [currentType] [Program.rndm.Next (likelyTypes [currentType].Length)];
+				if (model.Contains ("Verb") && (model.EndsWith ("noun ") || model.EndsWith ("pronoun ")))
+					endSentence = true;
+			}
+
+
+			return model;
 		}
 
 	}
