@@ -42,7 +42,7 @@ namespace Alyx {
 		public string reformat (string phrase) {
 			string ABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 			string abc = "abcdefghijklmnopqrstuvwxyz";
-			string illegal = "@#$%^&*()+=-|{}[]/><~_";
+			string illegal = ".,?!@#$%^&*()+=-|{}[]/><~_";
 			string formatted = "";
 			for (int i = 0; i < phrase.Length; i++) {
 				if (i == 0 || phrase [i - 1] == ' ') {
