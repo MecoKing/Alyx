@@ -27,15 +27,22 @@ namespace Alyx {
 			tags = commonTags (tagFrequencies (), 6);
 
 			if (Program.showAnalysis) {
+				Console.Write ("KNOWN: ");
 				foreach (Word term in words)
 					Console.Write ("{0} ", term.name);
 				Console.WriteLine ();
+				Console.Write ("PHONETIC: ");
 				foreach (Word term in words)
 					Console.Write ("{0} ", term.phonetic);
 				Console.WriteLine ();
+				Console.Write ("TAGS: ");
 				foreach (string tag in tags)
 					Console.Write ("{0} ", tag);
 				Console.WriteLine ();
+			}
+			foreach (string tag in allTags) {
+				if (tag == "command")
+					Command.checkForOrderIn (this);
 			}
 		}
 
@@ -130,7 +137,7 @@ namespace Alyx {
 //			string sentenceModel = sentenceModels [Program.rndm.Next (sentenceModels.Length)];
 			string sentenceModel = generateSentenceModel ();
 			if (Program.showAnalysis)
-				Console.WriteLine (sentenceModel);
+				Console.WriteLine ("SYNTAX: {0}", sentenceModel);
 			string substring = "";
 			for (int i = 0; i < sentenceModel.Length; i++) {
 				if (sentenceModel [i] == ' ' || i == sentenceModel.Length - 1) {
