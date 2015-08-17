@@ -24,7 +24,7 @@ namespace Alyx {
 		/// <summary>  Analyzes a written sentence seperating it into individual words and tags.  </summary>
 		public Sentence (string phrase) {
 			words = individualWords (reformat (phrase));
-			tags = commonTags (tagFrequencies (), 4);
+			tags = commonTags (tagFrequencies (), 6);
 
 			if (Program.showAnalysis) {
 				foreach (Word term in words)
