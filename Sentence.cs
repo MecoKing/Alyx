@@ -86,15 +86,13 @@ namespace Alyx {
 		public Dictionary<string, int> tagFrequencies () {
 			Dictionary <string, int> tagCounter = new Dictionary<string, int> ();
 			//For every tag in every word in the known words list
-			foreach (Word word in words) {
-				foreach (string tag in word.getTags) {
-					//If the tag has already appeared, add 1 to its frequency
-					if (tagCounter.ContainsKey (tag))
-						tagCounter [tag]++;
-					//Otherwise, add it as a new tag with a frequency of 1
-					else
-						tagCounter.Add (tag, 1);
-					}
+			foreach (string tag in allTags) {
+				//If the tag has already appeared, add 1 to its frequency
+				if (tagCounter.ContainsKey (tag))
+					tagCounter [tag]++;
+				//Otherwise, add it as a new tag with a frequency of 1
+				else
+					tagCounter.Add (tag, 1);
 			}
 			//Remove any tags we don't want from the list of frequent tags...
 			foreach (string illegalTag in illegalTags)
