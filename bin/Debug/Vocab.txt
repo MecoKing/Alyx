@@ -95,6 +95,7 @@ Hello: exclamation social positive start
 Help: Verb positive good
 Here: adverb in present
 Hi: exclamation start positive
+Hide: Verb noun mammal dim in command animal human false present negative
 Home: noun human residential
 Horrible: adjective negative
 How: adverb question
@@ -192,6 +193,7 @@ Sensed: Verb sense feel past
 Sentence: noun language abstract social
 Sentences: noun language abstract social plural
 Several: adjective pronoun many
+Show: Verb noun art music positive bright front see entertainment command
 Sight: noun Verb see sense
 Since: preposition past present specific
 Slave: noun Verb human bad politics
