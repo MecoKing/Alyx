@@ -9,6 +9,7 @@ namespace Alyx {
 		public string tags;
 		public string phonetic;
 
+		/// <summary> Arranges the tags associated with this word in an array. </summary>
 		public string[] getTags { get {
 				List<string> myTags = new List<string> ();
 				string individual = ""; 
@@ -28,8 +29,8 @@ namespace Alyx {
 			}
 		}
 
-		//A script will look like this:
-		//    name: tag anotherTag thirdTag moarTags
+		/// <summary> Creates a new word object from a given script. </summary>
+		/// <param name="script">name: tag anotherTag nextTag ...</param>
 		public Word (string script) {
 			string subScript = "";
 			for (int i = 0; i < script.Length; i++) {
@@ -46,10 +47,8 @@ namespace Alyx {
 			phonetic = Phonetic.generatePhoneticsFor (name);
 		}
 
-		//Returns a collection of words that have the given tags.
-		//Add '&' to the start of a searchTag to get tags out of the previous that only have that tag
-		//i.e. noun, animal, &domestic gets all the nouns and all the animals and returns only the ones that are also domestic
-		//whereas noun, animal, domestic returns all the noun, animal and domestic words.
+		/// <summary> Returns an array of words that have some of the given tags.
+		/// Adding '&' before a tag ensures that all previously tagged words also contain the current tag. </summary>
 		public static Word[] wordsTaggedFromCollection (Word[] collection, params string[] searchTags) {
 			List<Word> taggedWords = new List<Word> ();
 			foreach (string tag in searchTags) {
@@ -66,8 +65,7 @@ namespace Alyx {
 			return taggedWords.ToArray ();
 		}
 
-		//Gets a word with the same name as the given string from a collection
-		//If no such word exists, returns null (Watch out for that!)
+		/// <summary> Gets a word with the given name from the collection if it exists. </summary>
 		public static Word fromCollection (string term, Word[] collection) {
 			foreach (Word word in collection) {
 				if (word.name == term)
@@ -76,7 +74,7 @@ namespace Alyx {
 			return null;
 		}
 
-		//Loads all the words from the dictionary file Vocab.txt into the game
+		/// <summary> Loads all the words from Vocab.txt into the vocabulary array. </summary>
 		public static void loadWords () {
 			using (StreamReader reader = new StreamReader ("Vocab.txt")) {
 				string line;
@@ -86,7 +84,7 @@ namespace Alyx {
 			}
 		}
 
-		//adds unknown terms to the list of words that need to be added
+		/// <summary> Adds a term to the list of unknown words. </summary>
 		public static void addUnknown (string term) {
 			using (StreamWriter writer = new StreamWriter ("UnknownWords.txt", true)) {
 				writer.WriteLine (term);

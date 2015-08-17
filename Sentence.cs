@@ -9,6 +9,7 @@ namespace Alyx {
 		public Word[] words;
 		public string[] tags;
 
+		/// <summary> Gets every tag from every word (no duplicates). </summary>
 		public string[] allTags { get {
 				List<string> tagsInWords = new List<string> ();
 				foreach (Word term in words) {

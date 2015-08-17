@@ -10,9 +10,8 @@ namespace Alyx { //Protector of Humanity
 		public static List<Word> vocab = new List<Word> ();
 		public static Random rndm = new Random ();
 
-		//Loads all the files and stuff. Used once... at startup.
+		/// <summary> Loads all files and runs all tests. Used once at startup. </summary>
 		public static void Startup () {
-			//Clear the log load the vocabulary and write a message to the debug log
 			Log.Clear ();
 			Word.loadWords ();
 			Log.Write ("Program.cs", "INFO", "All file loading methods have completed their tasks captain!");
@@ -23,7 +22,6 @@ namespace Alyx { //Protector of Humanity
 			Console.WriteLine ("Hello I am Alyx, a unique syntax based chatbot!\n");
 		}
 
-		//The Main method
 		public static void Main (string[] args) {
 			//Initialize the program
 			Startup ();
@@ -38,5 +36,6 @@ namespace Alyx { //Protector of Humanity
 				Console.WriteLine ();
 			}
 		}
+
 	}
 }
