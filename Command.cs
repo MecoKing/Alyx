@@ -6,6 +6,7 @@ namespace Alyx {
 
 		static string orders = "Show Hide";
 		static string modifiers = "Analysis";
+		/// <summary> Lists the modifiers that work with each order. </summary>
 		static Dictionary<string, string> orderMods = new Dictionary<string, string> () {
 			{"Show", "Analysis"},
 			{"Hide", "Analysis"}

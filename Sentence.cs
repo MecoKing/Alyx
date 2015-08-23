@@ -134,7 +134,6 @@ namespace Alyx {
 		/// <summary> Generates a new sentence from the analyzed words and tags. </summary>
 		public string generate () {
 			List<Word> generatedPhrase = new List<Word> ();
-//			string sentenceModel = sentenceModels [Program.rndm.Next (sentenceModels.Length)];
 			string sentenceModel = generateSentenceModel ();
 			if (Program.showAnalysis)
 				Console.WriteLine ("SYNTAX: {0}", sentenceModel);
@@ -185,10 +184,7 @@ namespace Alyx {
 				if (model.Contains ("Verb") && (model.EndsWith ("noun ") || model.EndsWith ("pronoun ")))
 					endSentence = true;
 			}
-
-
 			return model;
 		}
-
 	}
 }
