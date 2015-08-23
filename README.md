@@ -22,7 +22,9 @@ Philosophy:
 - Alyx WILL be able to make inferences based on facts it already knows
 
 Service:
-- Alyx WILL be able to execute given commands
+- Alyx CAN pick up on keywords and modifiers in a sentence to tell if you want her to do something
+- Alyx CAN execute simple commands pertaining to the program itself
+- Alyx WILL be able to execute commands like search, post, open involving external applications
 
 Additionally:
 - Alyx MAY have an emotion engine backing its sentence generation
