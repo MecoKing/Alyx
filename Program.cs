@@ -14,12 +14,13 @@ namespace Alyx { //Protector of Humanity
 		public static void Startup () {
 			Log.Clear ();
 			Word.loadWords ();
-			Log.Write ("Program.cs", "INFO", "All file loading methods have completed their tasks captain!");
+			Log.Write ("Program.cs", "INFO", "All files have been loaded...");
 			Test.runAllTests ();
 			Log.Write ("Program.cs", "INFO", "All tests have completed testing...");
 
 			//Write a polite welcome
-			Console.WriteLine ("Hello I am Alyx, a unique syntax based chatbot!\n");
+			Sentence intro = new Sentence ("Hello Hello Hello Alyx Alyx Alyx");
+			Console.WriteLine ("{0}\n", intro.generate ());
 		}
 
 		public static void Main (string[] args) {
