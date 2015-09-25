@@ -80,7 +80,14 @@ namespace Alyx {
 					//If it exists add it as a word in the sentence
 					if (newTerm != null)
 						terms.Add (newTerm);
-					else
+					//Check to see if removing an s makes it a legal word
+					else if (substring.EndsWith ("s")) {
+						Word newTermNotPlural = Word.fromCollection (substring.Remove (substring.Length - 1), Program.vocab.ToArray ());
+						if (newTermNotPlural != null)
+							terms.Add (newTermNotPlural);
+						else
+							Word.addUnknown (substring);
+					} else
 						Word.addUnknown (substring);
 					substring = "";
 				} else
