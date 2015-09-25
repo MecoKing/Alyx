@@ -4,12 +4,13 @@ using System.Collections.Generic;
 namespace Alyx {
 	public class Command {
 
-		static string orders = "Show Hide";
-		static string modifiers = "Analysis";
+		static string orders = "Show Hide Clean";
+		static string modifiers = "Analysis Unknowns";
 		/// <summary> Lists the modifiers that work with each order. </summary>
 		static Dictionary<string, string> orderMods = new Dictionary<string, string> () {
 			{"Show", "Analysis"},
-			{"Hide", "Analysis"}
+			{"Hide", "Analysis"},
+			{"Clean", "Unknowns"}
 		};
 
 		static string command;
@@ -46,6 +47,8 @@ namespace Alyx {
 				Program.showAnalysis = false;
 			else if (command == "Show Analysis")
 				Program.showAnalysis = true;
+			else if (command == "Clean Unknowns")
+				Word.cleanUnknowns ();
 		}
 	}
 }

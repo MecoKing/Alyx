@@ -43,6 +43,7 @@ Can: Verb
 Cannot: Verb negative
 Cant: Verb negative
 Child: noun human young living male female
+Clean: adjective adverb Verb good bright command see feel physical
 Code: noun Verb virtual math
 Communication: noun social
 Conversation: noun social
@@ -247,6 +248,7 @@ Too: adverb some
 Tuesday: adverb noun day week start
 Two: adjective few plural
 Understand: Verb mental new
+Unknowns: adjective noun generic plural mental
 User: noun human physical specific
 Vacation: noun good week month year happy business emotional physical
 Violet: noun adjective cold violet plant

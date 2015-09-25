@@ -91,7 +91,20 @@ namespace Alyx {
 				writer.WriteLine (term);
 			}
 		}
-
+		public static void cleanUnknowns () {
+			List<string> unknowns = new List<string> ();
+			using (StreamReader reader = new StreamReader ("UnknownWords.txt")) {
+				string line;
+				while ((line = reader.ReadLine ()) != null) {
+					if (!unknowns.Contains (line))
+						unknowns.Add (line);
+				}
+			}
+			using (StreamWriter writer = new StreamWriter ("UnknownWords.txt", false)) {
+				foreach (string unknown in unknowns)
+					writer.WriteLine (unknown);
+			}
+		}
 
 
 	}
