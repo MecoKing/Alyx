@@ -1,6 +1,7 @@
 A: article generic
 Able: adjective positive physical mental
 Abode: noun residential
+Absolutely: adverb specific true 
 Add: Verb math
 Added: Verb math past
 Advancement: noun
@@ -9,6 +10,7 @@ Almost: adverb small some
 Alright: adjective adverb positive
 Alyx: name self
 Am: Verb present
+Amazing: adjective new positive happy emotional
 An: article generic
 Analysis: noun see science math
 Analyze: Verb see science math present
@@ -35,6 +37,7 @@ Broke: Verb negative sad past
 Broken: adjective negative sad
 Brown: adjective brown
 Bug: noun Verb animal insect digital negative
+Butt: noun immature negative below animal human
 By: preposition
 Can: Verb
 Cannot: Verb negative
@@ -65,6 +68,7 @@ Expand: Verb big large business hot physical
 Eye: noun living sense see
 Fact: noun true science
 Family: noun collective human social
+Far: adjective adverb negative back continental see large
 Feel: Verb mental emotional physical sense
 Few: adjective few
 Fill: Verb all in
@@ -87,8 +91,9 @@ Grey: adjective grey neutral
 Going: noun adjective Verb out future
 Good: noun adjective positive good
 Goodbye: exclamation social end
+Got: Verb material past possession
 Hate: Verb emotional negative anger
-Have: Verb material present
+Have: Verb material present possession
 Head: noun Verb mental front
 Hear: Verb mental sense hear
 Hello: exclamation social positive start
@@ -166,8 +171,11 @@ Over: adverb preposition above end
 Own: Verb adjective pronoun possession human 
 Pasta: noun taste physical italy
 Pencil: noun Verb art language small physical
+Phrasing: Verb language social
 Pink: adjective pink bright love
 Pizza: noun taste italy
+Please: Verb adverb good positive happy social
+Predictable: adjective specific math science true sense mental
 Present: noun Verb adjective happy present
 Problem: noun negative math abstract bad
 Process: noun Verb physical science math specific
@@ -175,6 +183,7 @@ Program: noun Verb digital language math
 Progress: noun positive new good
 Purple: adjective violet dark cold alien
 Quick: adjective physical mental
+Random: adjective neutral abstract math digital
 Real: adjective true present
 Really: adverb exclamation true
 Recognize: Verb true see human mental past
@@ -185,6 +194,7 @@ Say: Verb social language human music
 Said: Verb social language human music past
 Saw: noun Verb see past material animal
 Scent: noun Verb smell specific
+School: noun language art music math science municipal human governmental mental
 Second: noun few present past future second
 See: Verb see material animal
 Self: noun self
@@ -211,6 +221,7 @@ Spit: Verb noun negative past taste
 Spitting: Verb negative taste
 State: noun Verb adjective present politics physical
 Start: noun Verb start
+Sun: noun single yellow white bright planetary huge hot
 Sunday: noun adverb day week end
 Talk: noun Verb social language
 Talking: noun Verb social language present future
@@ -232,10 +243,12 @@ Times: noun past plural
 To: preposition front
 Today: adverb noun day specific present
 Tongue: noun taste sense
+Too: adverb some
 Tuesday: adverb noun day week start
 Two: adjective few plural
 Understand: Verb mental new
 User: noun human physical specific
+Vacation: noun good week month year happy business emotional physical
 Violet: noun adjective cold violet plant
 Vision: noun sense see art
 Vocabulary: noun some language collective human social
