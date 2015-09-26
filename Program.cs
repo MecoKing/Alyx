@@ -9,9 +9,11 @@ namespace Alyx { //Protector of Humanity
 
 		public static List<Word> vocab = new List<Word> ();
 		public static Random rndm = new Random ();
+		public static ConsoleColor colour;
 
 		/// <summary> Loads all files and runs all tests. Used once at startup. </summary>
 		public static void Startup () {
+			colour = Console.ForegroundColor;
 			Log.Clear ();
 			Word.loadWords ();
 			Log.Write ("Program.cs", "INFO", "All files have been loaded...");
