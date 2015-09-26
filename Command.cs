@@ -4,8 +4,9 @@ using System.Collections.Generic;
 namespace Alyx {
 	public class Command {
 
-		static string orders = "Show Hide Clean";
-		static string modifiers = "Analysis Unknowns";
+		//Leave a space at the start and end of these to check for the full word.
+		static string orders = " Show Hide Clean ";
+		static string modifiers = " Analysis Unknowns ";
 		/// <summary> Lists the modifiers that work with each order. </summary>
 		static Dictionary<string, string> orderMods = new Dictionary<string, string> () {
 			{"Show", "Analysis"},
@@ -21,9 +22,9 @@ namespace Alyx {
 			List<string> possibleModifier = new List<string> ();
 
 			foreach (Word term in phrase.words) {
-				if (orders.Contains (term.name))
+				if (orders.Contains (" " + term.name + " "))
 					possibleOrder.Add (term.name);
-				else if (modifiers.Contains (term.name))
+				else if (modifiers.Contains (" " + term.name + " "))
 					possibleModifier.Add (term.name);
 			}
 

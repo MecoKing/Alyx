@@ -91,6 +91,7 @@ namespace Alyx {
 				writer.WriteLine (term);
 			}
 		}
+		/// <summary> Removes duplicate words from UnknownWords.txt </summary>
 		public static void cleanUnknowns () {
 			List<string> unknowns = new List<string> ();
 			using (StreamReader reader = new StreamReader ("UnknownWords.txt")) {
