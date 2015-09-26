@@ -9,6 +9,9 @@ namespace Alyx {
 		public Word[] words;
 		public string[] tags;
 
+		public Word subject;
+//		public Word action;
+
 		/// <summary> Gets every tag from every word (no duplicates). </summary>
 		public string[] allTags { get {
 				List<string> tagsInWords = new List<string> ();
@@ -25,6 +28,7 @@ namespace Alyx {
 		public Sentence (string phrase) {
 			words = individualWords (reformat (phrase));
 			tags = commonTags (tagFrequencies (), 6);
+			detectSubject ();
 
 			if (Program.showAnalysis) {
 				Console.Write ("KNOWN: ");
@@ -43,6 +47,7 @@ namespace Alyx {
 			foreach (string tag in allTags) {
 				if (tag == "command")
 					Command.checkForOrderIn (this);
+				Console.WriteLine ("SUBJECT: {0}", subject.name);
 			}
 		}
 
@@ -96,6 +101,30 @@ namespace Alyx {
 			return terms.ToArray ();
 		}
 
+		/// <summary> Guesses at what the subject of the sentence should be based on the previous... </summary>
+		public void detectSubject () {
+			for (int i = words.Length - 1; i > 0; i--) {
+				if (words [i].tags.Contains ("noun") || words [i].tags.Contains ("name")) {
+					subject = words [i];
+					break;
+				}
+			}
+			//THIS IS BAD
+			//Makes up a random subject if no suitable word was found...
+			if (subject == null)
+				subject = wordThatFollowsTags ("noun");
+		}
+		/// <summary> Checks to see if the guessed subject fits nicely with the common tags </summary>
+		public bool subjectFollowsTags () {
+			double tagsPassed = 0;
+			foreach (string tag in tags) {
+				if (subject.tags.Contains (tag))
+					tagsPassed++;
+			}
+			//Percentage might have to change...
+			return (tagsPassed / tags.Length >= 0.70);
+		}
+
 		/// <summary> Detemines the frequency of tags shown in the words array </summary>
 		public Dictionary<string, int> tagFrequencies () {
 			Dictionary <string, int> tagCounter = new Dictionary<string, int> ();
@@ -138,28 +167,33 @@ namespace Alyx {
 			}
 		}
 
+		//DOCUMENT ME!!!
 		/// <summary> Generates a new sentence from the analyzed words and tags. </summary>
 		public string generate () {
 			List<Word> generatedPhrase = new List<Word> ();
 			string sentenceModel = generateSentenceModel ();
 			if (Program.showAnalysis)
 				Console.WriteLine ("SYNTAX: {0}", sentenceModel);
+			bool printedSubject = false;
 			string substring = "";
 			for (int i = 0; i < sentenceModel.Length; i++) {
 				if (sentenceModel [i] == ' ' || i == sentenceModel.Length - 1) {
 					if (i == sentenceModel.Length - 1)
 						substring += sentenceModel [i];
-					List<string> searchTags = new List<string> ();
-					foreach (string tag in tags)
-						searchTags.Add (tag);
-					searchTags.Add ("&" + substring);
-					Word[] taggedWords = Word.wordsTaggedFromCollection (Program.vocab.ToArray (), searchTags.ToArray ());
-					if (taggedWords.Length > 0)
-						generatedPhrase.Add (taggedWords [Program.rndm.Next (taggedWords.Length)]);
-					else {
-						taggedWords = Word.wordsTaggedFromCollection (Program.vocab.ToArray (), substring);
-						generatedPhrase.Add (taggedWords [Program.rndm.Next (taggedWords.Length)]);
-					}
+					if ((substring == "name" || substring == "pronoun" || substring == "noun") && !printedSubject) {
+						if (subjectFollowsTags ())
+							generatedPhrase.Add (subject);
+						else {
+							generatedPhrase.Add (wordThatFollowsTags (substring));
+							if (Program.showAnalysis) {
+								Console.ForegroundColor = ConsoleColor.Red;
+								Console.WriteLine ("FAIL: Subject did not have enough to do with the sentence!");
+								Console.ForegroundColor = Program.colour;
+							}
+						}
+						printedSubject = true;
+					} else
+						generatedPhrase.Add (wordThatFollowsTags (substring));
 					substring = "";
 				} else
 					substring += sentenceModel [i];
@@ -168,6 +202,21 @@ namespace Alyx {
 			foreach (Word term in generatedPhrase)
 				phrase += term.name + " ";
 			return phrase;
+		}
+
+		/// <summary> Gets a random word that follows all the given tags. </summary>
+		public Word wordThatFollowsTags (string type) {
+			List<string> searchTags = new List<string> ();
+			foreach (string tag in tags)
+				searchTags.Add (tag);
+			searchTags.Add ("&" + type);
+			Word[] taggedWords = Word.wordsTaggedFromCollection (Program.vocab.ToArray (), searchTags.ToArray ());
+			if (taggedWords.Length > 0)
+				return taggedWords [Program.rndm.Next (taggedWords.Length)];
+			else {
+				taggedWords = Word.wordsTaggedFromCollection (Program.vocab.ToArray (), type);
+				return taggedWords [Program.rndm.Next (taggedWords.Length)];
+			}
 		}
 
 		/// <summary> Generates a model to create a sentence with. </summary>
