@@ -30,6 +30,11 @@ namespace Alyx {
 			tags = commonTags (tagFrequencies (), 6);
 			detectSubject ();
 
+			foreach (string tag in allTags) {
+				if (tag == "command")
+					Command.checkForOrderIn (this);
+			}
+
 			if (Program.showAnalysis) {
 				Console.Write ("KNOWN: ");
 				foreach (Word term in words)
@@ -43,10 +48,6 @@ namespace Alyx {
 				foreach (string tag in tags)
 					Console.Write ("{0} ", tag);
 				Console.WriteLine ();
-			}
-			foreach (string tag in allTags) {
-				if (tag == "command")
-					Command.checkForOrderIn (this);
 				Console.WriteLine ("SUBJECT: {0}", subject.name);
 			}
 		}
