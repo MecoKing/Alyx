@@ -87,8 +87,8 @@ namespace Alyx {
 					if (newTerm != null)
 						terms.Add (newTerm);
 					//Check to see if removing an s makes it a legal word
-					else if (substring.EndsWith ("s")) {
-						Word newTermNotPlural = Word.fromCollection (substring.Remove (substring.Length - 1), Program.vocab.ToArray ());
+					else if (substring.EndsWith ("'s")) {
+						Word newTermNotPlural = Word.fromCollection (substring.Remove (substring.Length - 2, 2), Program.vocab.ToArray ());
 						if (newTermNotPlural != null)
 							terms.Add (newTermNotPlural);
 						else
