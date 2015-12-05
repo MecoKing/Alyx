@@ -1,4 +1,5 @@
 A: article generic
+Ability: noun positive sense physical mental
 Able: adjective positive physical mental
 Abode: noun residential
 Absolutely: adverb specific true 
@@ -8,7 +9,7 @@ Advancement: noun
 Again: adverb past
 Almost: adverb small some
 Alright: adjective adverb positive
-Alyx: name self
+Alyx: name self digital
 Am: Verb present
 Amazing: adjective new positive happy emotional
 An: article generic
@@ -45,6 +46,7 @@ Cant: Verb negative
 Child: noun human young living male female
 Clean: adjective adverb Verb good bright command see feel physical
 Code: noun Verb virtual math
+Come: Verb preposition in out past physical
 Communication: noun social
 Conversation: noun social
 Could: Verb past
@@ -54,6 +56,7 @@ Dictionary: noun physical digital
 Did: Verb past generic
 Dirt: noun nature dead brown
 Dirty: adjective nature dead brown
+Disappointed: adjective negative sad 
 Discussion: noun social human language
 Do: Verb generic
 Dog: noun animal living mammal small medium brown grey black white
@@ -135,6 +138,7 @@ Live: Verb living animal plant human music
 Lot: noun pronoun municipal neutral many
 Look: Verb noun exclamation sense see
 Looks: Verb noun sense see plural
+Make: Verb noun new positive physical
 Many: pronoun many
 Me: pronoun self human
 Mean: Verb adjective bad negative emotional
@@ -189,6 +193,7 @@ Real: adjective true present
 Really: adverb exclamation true
 Recognize: Verb true see human mental past
 Red: adjective red hot anger
+Repeating: adjective math start end future
 Right: noun Verb adverb adjective good true right
 Saturday: noun adverb day week end
 Say: Verb social language human music
@@ -222,6 +227,7 @@ Spit: Verb noun negative past taste
 Spitting: Verb negative taste
 State: noun Verb adjective present politics physical
 Start: noun Verb start
+Still: adjective noun adverb Verb generic dead temperate
 Sun: noun single yellow white bright planetary huge hot
 Sunday: noun adverb day week end
 Talk: noun Verb social language
@@ -261,8 +267,10 @@ We: pronoun plural social self
 Weather: noun Verb temperate cold warm hot
 Wednesday: noun adverb day week
 Welcome: noun Verb social start positive
+Well: exclamation adverb adjective noun positive happy feel human emotional physical mental
 What: article question
 White: adjective white cold good
+Who: pronoun generic question human
 Why: adverb question
 Word: noun language small
 Words: noun language small plural
