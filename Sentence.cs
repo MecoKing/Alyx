@@ -42,6 +42,10 @@ namespace Alyx {
 				foreach (Word term in words)
 					Console.Write ("{0} ", term.name);
 				Console.WriteLine ();
+				Console.Write ("SYNTAX: ");
+				foreach (string syn in detectSyntax ())
+					Console.Write ("{0} ", syn);
+				Console.WriteLine ();
 				Console.Write ("PHONETIC: ");
 				foreach (Word term in words)
 					Console.Write ("{0} ", term.phonetic);
@@ -237,6 +241,60 @@ namespace Alyx {
 					endSentence = true;
 			}
 			return model;
+		}
+
+		public string[] detectSyntax () {
+			string syntaxTypes = "article pronoun adjective adverb noun Verb preposition conjunction exclamation name";
+			string[] syntax = new string[words.Length];
+			for (int i = 0; i < syntax.Length; i++)
+				syntax [i] = "???";
+			
+			for (int i = 0; i < words.Length; i++) {
+				List<string> syntaxTags = new List<string> ();
+				string substring = "";
+				for (int ind = 0; ind < words[i].tags.Length; ind++) {
+					string wordStops = " .,:;?!";
+					if (wordStops.Contains (words[i].tags [ind].ToString ()) && substring != "") {
+						if (syntaxTypes.Contains (substring))
+							syntaxTags.Add (substring);
+						substring = "";
+					} else if (ind == words[i].tags.Length - 1) {
+						substring += words[i].tags [ind];
+						if (syntaxTypes.Contains (substring))
+							syntaxTags.Add (substring);
+						substring = "";
+					} else {
+						if (!wordStops.Contains (words [i].tags [ind].ToString ()))
+							substring += words[i].tags [ind];
+					}
+				}
+				//Decide what syntaxType should go at this position
+				int tries = 0;
+				while (syntaxTags.Count > 1) {
+					if (i > 0 && syntaxTags.Contains ("noun") && syntax [i - 1] == "article") {
+						syntaxTags.Clear ();
+						syntaxTags.Add ("noun");
+					} else if (i > 0 && syntaxTags.Contains ("Verb") && syntax [i - 1] == "adverb") {
+						syntaxTags.Clear ();
+						syntaxTags.Add ("Verb");
+					} else if (i > 0 && syntaxTags.Contains ("adjective") && syntax [i - 1] == "adjective")
+						syntaxTags.Remove ("adjective");
+					else if (i > 0 && syntaxTags.Contains ("Verb") && syntax [i - 1] == "Verb")
+						syntaxTags.Remove ("Verb");
+					else if (syntaxTags.Contains ("name") && syntaxTags.Contains ("noun"))
+						syntaxTags.Remove ("name");
+
+					//to avoid infinite loops
+					tries++;
+					if (tries > syntaxTags.Count) {
+						Log.Write ("Sentence.cs", "BUG", "Failed to narrow down syntax for word: " + words [i].name);
+						break;
+					}
+				}
+				syntax [i] = syntaxTags [0];
+					
+			}
+			return syntax;
 		}
 	}
 }

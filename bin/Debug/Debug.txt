@@ -1,3 +1,5 @@
-2016-01-18 9:02:46 AM
+2016-01-18 9:48:57 AM
 [Program.cs, INFO]: All files have been loaded...
 [Program.cs, INFO]: All tests have completed testing...
+[Sentence.cs, BUG]: Failed to narrow down syntax for word: Well
+[Sentence.cs, BUG]: Failed to narrow down syntax for word: Today
