@@ -5,7 +5,16 @@ namespace Alyx {
 	public class Simplifier {
 
 		static Dictionary<string, string[]> simplifications = new Dictionary<string, string[]> () {
+			//CONJUNCTIONS
+			{"What Is", new string[] {"What's"}},
+			{"It Is", new string[] {"It's"}},
+			{"Do Not", new string[] {"Don't"}},
+			{"Was Not", new string[] {"Wasn't"}},
+			//GROUPS
 			{"Be", new string[] {"Am", "Was", "Is", "Are", "Were", "Being", "Been"}},
+			//REVERSALS
+			{"Good", new string[] {"Not Bad", "Not So Bad", "Not Too Bad", "Not Half Bad"}},
+			{"Alright", new string[] {"Not Awful"}}
 		};
 
 		static string makeInfinitive (string word) {
@@ -20,7 +29,7 @@ namespace Alyx {
 
 		static string makeNonPossessive (string word) {
 			Dictionary <string, string> exceptions = new Dictionary<string, string> () {
-				{"His", "Him"}
+				{"His", "Him"}, {"Hers", "Her"}, {"Their", "They"}, {"Mine", "Me"}, {"Your", "You"}
 			};
 			if (exceptions.ContainsKey (word))
 				return exceptions [word];
@@ -33,7 +42,7 @@ namespace Alyx {
 		}
 
 		static string makeSingular (string word) {
-			string notPlural = "Was Analysis";
+			string notPlural = "Was Analysis This Success Always";
 			Dictionary <string, string> exceptions = new Dictionary<string, string> () {
 				{"Mice", "Mouse"}
 			};
