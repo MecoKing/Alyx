@@ -26,8 +26,8 @@ namespace Alyx {
 
 		/// <summary>  Analyzes a written sentence seperating it into individual words and tags.  </summary>
 		public Sentence (string phrase) {
-			words = individualWords (reformat (phrase));
-			Simplifier.simplify (this);
+			phrase = Simplifier.simplify (reformat (phrase));
+			words = individualWords (phrase);
 			tags = commonTags (tagFrequencies (), 6);
 			detectSubject ();
 
@@ -37,6 +37,7 @@ namespace Alyx {
 			}
 
 			if (Program.showAnalysis) {
+				Console.WriteLine ("REFORMAT: {0}", phrase);
 				Console.Write ("KNOWN: ");
 				foreach (Word term in words)
 					Console.Write ("{0} ", term.name);

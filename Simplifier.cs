@@ -35,19 +35,51 @@ namespace Alyx {
 				return word;
 		}
 
-		public static Sentence simplify (Sentence input) {
-			for (int pos = 0; pos < input.words.Length; pos++) {
-				input.words [pos] = new Word (makeNonPossessive (input.words [pos].name) + ": " + input.words [pos].tags);
-				input.words [pos] = new Word (makeSingular (input.words [pos].name) + ": " + input.words [pos].tags);
-				foreach (string key in simplifications.Keys) {
-					foreach (string term in simplifications [key]) {
-						if (input.words [pos].name == term) {
-							input.words [pos] = new Word (key + ": " + input.words [pos].tags);
-							break;
-						}
+		public static string simplify (string input) {
+			//Try simplifying
+			foreach (string key in simplifications.Keys) {
+				foreach (string term in simplifications [key]) {
+					if (input.Contains (term)) {
+						input = input.Replace (term, key);
+						break;
 					}
 				}
 			}
+			//Get rid of any plural or possessive nouns
+			string substring = "";
+			for (int ind = 0; ind < input.Length; ind++) {
+				string wordStops = " .,:;?!";
+				if (wordStops.Contains (input [ind].ToString ()) && substring != "") {
+					input = input.Replace (substring, makeNonPossessive (substring));
+					input = input.Replace (substring, makeSingular (substring));
+					input = input.Replace (substring, makeInfinitive (substring));
+					substring = "";
+				} else if (ind == input.Length - 1) {
+					substring += input [ind];
+					input = input.Replace (substring, makeNonPossessive (substring));
+					input = input.Replace (substring, makeSingular (substring));
+					input = input.Replace (substring, makeInfinitive (substring));
+					substring = "";
+				} else {
+					substring += input [ind];
+				}
+			}
+			//Try simplifying again...
+			foreach (string key in simplifications.Keys) {
+				foreach (string term in simplifications [key]) {
+					if (input.Contains (term)) {
+						input = input.Replace (term, key);
+						break;
+					}
+				}
+			}
+
+
+//			for (int pos = 0; pos < input.words.Length; pos++) {
+//				input.words [pos] = new Word (makeNonPossessive (input.words [pos].name) + ": " + input.words [pos].tags);
+//				input.words [pos] = new Word (makeSingular (input.words [pos].name) + ": " + input.words [pos].tags);
+//				
+//			}
 			return input;
 		}
 	}
