@@ -1,16 +1,16 @@
-START: exclamation Verb pronoun pronoun pronoun preposition adverb adjective
+START: exclamation Verb pronoun pronoun pronoun preposition adverb adjective Verb adjective Verb adjective pronoun Verb adjective END
 START exclamation: adverb
 exclamation adverb: Verb
 adverb Verb: pronoun Verb
-Verb pronoun: END noun pronoun Verb
-START Verb: pronoun
-pronoun noun: Verb pronoun END Verb
-noun Verb: END pronoun
-START pronoun: Verb noun Verb
-pronoun Verb: article pronoun adjective article
+Verb pronoun: END noun pronoun Verb noun noun noun
+START Verb: pronoun pronoun pronoun pronoun
+pronoun noun: Verb pronoun END Verb END Verb END
+noun Verb: END pronoun END
+START pronoun: Verb noun Verb Verb
+pronoun Verb: article pronoun adjective article adjective
 Verb article: noun noun article
-article noun: preposition pronoun END
-noun preposition: article
+article noun: preposition pronoun END preposition END END
+noun preposition: article pronoun
 preposition article: pronoun
 article pronoun: END
 noun pronoun: pronoun END
@@ -18,10 +18,10 @@ pronoun pronoun: adverb adverb Verb
 pronoun adverb: Verb noun
 Verb Verb: preposition
 Verb preposition: pronoun
-preposition pronoun: noun noun
+preposition pronoun: noun noun END
 adverb noun: END
 START preposition: pronoun
-Verb adjective: Verb
+Verb adjective: Verb article
 adjective Verb: article adverb
 START adverb: pronoun
 adverb pronoun: adjective
@@ -29,5 +29,7 @@ pronoun adjective: conjunction
 adjective conjunction: pronoun
 conjunction pronoun: pronoun
 article article: noun
-START adjective: Verb
+START adjective: Verb article article article
 Verb adverb: END
+adjective article: Verb noun noun noun
+article Verb: END

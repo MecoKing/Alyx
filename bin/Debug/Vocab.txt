@@ -15,6 +15,7 @@ Analysis: noun see science math
 Analyze: Verb see science math present
 And: conjunction generic
 Animal: noun animal living male female
+Assistance: noun positive good
 Baby: noun adjective human living immature male female
 Back: noun adjective adverb Verb back commerce animal human
 Be: Verb abstract
@@ -239,7 +240,7 @@ Too: adverb some
 Tuesday: adverb noun day week start
 Two: adjective few plural
 Understand: Verb mental new
-Unknowns: adjective noun generic plural mental
+Unknown: adjective noun generic plural mental
 User: noun human physical specific
 Vacation: noun good week month year happy business emotional physical
 Violet: noun adjective cold violet plant

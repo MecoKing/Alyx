@@ -6,12 +6,12 @@ namespace Alyx {
 
 		//Leave a space at the start and end of these to check for the full word.
 		static string orders = " Show Hide Clean ";
-		static string modifiers = " Analysis Unknowns ";
+		static string modifiers = " Analysis Unknown ";
 		/// <summary> Lists the modifiers that work with each order. </summary>
 		static Dictionary<string, string> orderMods = new Dictionary<string, string> () {
 			{"Show", "Analysis"},
 			{"Hide", "Analysis"},
-			{"Clean", "Unknowns"}
+			{"Clean", "Unknown"}
 		};
 
 		static string command;
