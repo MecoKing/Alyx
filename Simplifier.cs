@@ -22,7 +22,7 @@ namespace Alyx {
 		static string makeInfinitive (string word) {
 			string notVerbs = "Morning Evening";
 			Dictionary <string, string> exceptions = new Dictionary<string, string> () {
-				{"Getting", "Get"}, {"Got", "Get"}, {"Coming", "Come"}, {"Came", "Come"}
+				{"Getting", "Get"}, {"Got", "Get"}, {"Coming", "Come"}, {"Came", "Come"}, {"Could", "Can"}
 			};
 			if (exceptions.ContainsKey (word))
 				return exceptions [word];
