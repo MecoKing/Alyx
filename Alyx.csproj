@@ -42,6 +42,8 @@
     <Compile Include="Background\Tests.cs" />
     <Compile Include="Command.cs" />
     <Compile Include="Simplifier.cs" />
+    <Compile Include="Markov.cs" />
+    <Compile Include="Conjugator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

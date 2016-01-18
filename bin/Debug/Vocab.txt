@@ -4,24 +4,20 @@ Able: adjective positive physical mental
 Abode: noun residential
 Absolutely: adverb specific true 
 Add: Verb math
-Added: Verb math past
 Advancement: noun
 Again: adverb past
 Almost: adverb small some
 Alright: adjective adverb positive
 Alyx: name self digital
-Am: Verb present
 Amazing: adjective new positive happy emotional
 An: article generic
 Analysis: noun see science math
 Analyze: Verb see science math present
 And: conjunction generic
 Animal: noun animal living male female
-Are: Verb present
 Baby: noun adjective human living immature male female
 Back: noun adjective adverb Verb back commerce animal human
 Be: Verb abstract
-Been: Verb abstract past
 Benefit: noun positive
 Between: adverb preposition specific in neutral
 Bigger: adjective physical large
@@ -29,31 +25,28 @@ Blue: adjective blue cold
 Black: adjective black dark
 Body: noun living animal
 Bodies: noun living animal some
+Bore: Verb neutral grey negative dim bored mental
 Boring: adjective negative emotional
 Brain: noun mental living
 Break: Verb negative sad
 Brief: adjective Verb minute politics small 
 Brilliant: adjective bright positive happy big warm mental
-Broke: Verb negative sad past
+Broke: negative sad past
 Broken: adjective negative sad
 Brown: adjective brown
 Bug: noun Verb animal insect digital negative
 Butt: noun immature negative below animal human
 By: preposition
 Can: Verb
-Cannot: Verb negative
-Cant: Verb negative
 Child: noun human young living male female
 Clean: adjective adverb Verb good bright command see feel physical
 Code: noun Verb virtual math
 Come: Verb preposition in out past physical
 Communication: noun social
 Conversation: noun social
-Could: Verb past
 Database: noun math virtual
 Day: noun present
 Dictionary: noun physical digital
-Did: Verb past generic
 Dirt: noun nature dead brown
 Dirty: adjective nature dead brown
 Disappointed: adjective negative sad 
@@ -77,7 +70,6 @@ Feel: Verb mental emotional physical sense
 Few: adjective few
 Fill: Verb all in
 Find: Verb noun see positive
-Found: Verb see positive past
 Follow: Verb back
 Following: adjective back
 Food: noun taste
@@ -86,16 +78,15 @@ Fox: noun animal living mammal medium orange
 Friday: noun adverb day week end
 Funny: adjective happy
 Generate: Verb new abstract science physical digital
-Get: Verb material
+Get: Verb material possession
 Give: Verb social
 Green: adjective Verb green cold nature
 Greet: Verb social start
 Greetings: noun exclamation social start
 Grey: adjective grey neutral
-Going: noun adjective Verb out future
+Going: noun adjective out future
 Good: noun adjective positive good
 Goodbye: exclamation social end
-Got: Verb material past possession
 Hate: Verb emotional negative anger
 Have: Verb material present possession
 Head: noun Verb mental front
@@ -115,7 +106,6 @@ If: noun conjunction true math science
 Improvement: noun positive
 In: adverb preposition in
 Interesting: adjective happy entertainment mental
-Is: Verb present abstract
 It: pronoun specific
 Italian: noun adjective human italy
 Italy: noun continental italy
@@ -131,7 +121,6 @@ Lazy: adjective physical negative
 Lead: noun Verb start front human
 Learn: Verb new true human
 Leave: Verb end out
-Let: Verb
 Life: noun living animal plant human
 Like: Verb adjective mental happy
 Live: Verb living animal plant human music
@@ -160,7 +149,6 @@ Nope: exclamation false negative
 Nose: noun Verb front sense smell human
 Not: adjective negative false
 Notice: noun Verb specific true see
-Noticed: Verb specific true see past
 Now: adverb conjunction present
 Of: preposition
 On: adverb preposition above physical
@@ -176,7 +164,7 @@ Over: adverb preposition above end
 Own: Verb adjective pronoun possession human 
 Pasta: noun taste physical italy
 Pencil: noun Verb art language small physical
-Phrasing: Verb language social
+Phrase: Verb language social
 Pink: adjective pink bright love
 Pizza: noun taste italy
 Please: Verb adverb good positive happy social
@@ -197,15 +185,13 @@ Repeating: adjective math start end future
 Right: noun Verb adverb adjective good true right
 Saturday: noun adverb day week end
 Say: Verb social language human music
-Said: Verb social language human music past
-Saw: noun Verb see past material animal
+Saw: noun see past material animal
 Scent: noun Verb smell specific
 School: noun language art music math science municipal human governmental mental
 Second: noun few present past future second
 See: Verb see material animal
 Self: noun self
 Sense: noun Verb sense feel
-Sensed: Verb sense feel past
 Sentence: noun language abstract social
 Sentences: noun language abstract social plural
 Several: adjective pronoun many
@@ -218,20 +204,19 @@ So: adverb many
 Software: noun digital math commercial
 Some: article some
 Sorry: adjective sad emotional positive
-Sorted: Verb past specific physical digital
+Sort: Verb past specific physical digital
 Sound: noun Verb hear music
 Space: noun Verb neutral dark out galactic universal large huge dead cold
 Speak: Verb social language hear
-Spent: adjective Verb past commercial material
+Spend: adjective Verb past commercial material
 Spit: Verb noun negative past taste
-Spitting: Verb negative taste
 State: noun Verb adjective present politics physical
 Start: noun Verb start
-Still: adjective noun adverb Verb generic dead temperate
+Still: adjective noun adverb generic dead temperate
 Sun: noun single yellow white bright planetary huge hot
 Sunday: noun adverb day week end
 Talk: noun Verb social language
-Talking: noun Verb social language present future
+Talking: noun social language present future
 Taste: noun Verb taste sense positive
 Technology: noun digital new physical
 Test: noun Verb specific math science true false question
@@ -241,7 +226,7 @@ There: adverb specific out
 Thing: noun generic
 Things: noun generic plural
 Think: Verb mental animal human
-This: pronoun single physical specific
+This: pronoun adjective single physical specific
 Those: pronoun plural specific
 Throw: Verb physical human
 Thursday: noun adverb day week
@@ -261,8 +246,7 @@ Violet: noun adjective cold violet plant
 Vision: noun sense see art
 Vocabulary: noun some language collective human social
 Wait: Verb noun minute hour present future
-Was: Verb past
-Will: noun Verb future emotional human
+Will: noun future emotional human
 We: pronoun plural social self
 Weather: noun Verb temperate cold warm hot
 Wednesday: noun adverb day week

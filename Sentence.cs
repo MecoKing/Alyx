@@ -5,6 +5,9 @@ namespace Alyx {
 	public class Sentence {
 
 		string[] illegalTags = new string[] {"", "pronoun", "noun", "Verb", "adverb", "article", "preposition", "adjective", "conjunction", "question", "command"};
+		string[] verbTenses = new string[] {
+			"Simple Present", "Simple Past", "Simple Future"
+		};
 
 		public Word[] words;
 		public string[] tags;
@@ -170,37 +173,40 @@ namespace Alyx {
 		//DOCUMENT ME!!!
 		/// <summary> Generates a new sentence from the analyzed words and tags. </summary>
 		public string generate () {
+			//Eventually choose a tense based on the previous sentences tense...
+			string selectedTense = verbTenses [Program.rndm.Next (verbTenses.Length)];
 			List<Word> generatedPhrase = new List<Word> ();
-			string sentenceModel = generateSentenceModel ();
-			if (Program.showAnalysis)
-				Console.WriteLine ("SYNTAX: {0}", sentenceModel);
+			string[] sentenceModel = generateSentenceModel ();
+			if (Program.showAnalysis) {
+				Console.Write ("SYNTAX: ");
+				foreach (string syn in sentenceModel)
+					Console.Write ("{0} ", syn);
+				Console.WriteLine ();
+			}
 			bool printedSubject = false;
-			string substring = "";
-			for (int i = 0; i < sentenceModel.Length; i++) {
-				if (sentenceModel [i] == ' ' || i == sentenceModel.Length - 1) {
-					if (i == sentenceModel.Length - 1)
-						substring += sentenceModel [i];
-					if ((substring == "name" || substring == "pronoun" || substring == "noun") && !printedSubject) {
-						if (subjectFollowsTags ())
-							generatedPhrase.Add (subject);
-						else {
-							generatedPhrase.Add (wordThatFollowsTags (substring));
-							if (Program.showAnalysis) {
-								Console.ForegroundColor = ConsoleColor.Red;
-								Console.WriteLine ("FAIL: Subject did not have enough to do with the sentence!");
-								Console.ForegroundColor = Program.colour;
-							}
+			foreach (string syntaxType in sentenceModel) {
+				if ((syntaxType == "name" || syntaxType == "pronoun" || syntaxType == "noun") && !printedSubject) {
+					if (subjectFollowsTags ())
+						generatedPhrase.Add (subject);
+					else {
+						generatedPhrase.Add (wordThatFollowsTags (syntaxType));
+						if (Program.showAnalysis) {
+							Console.ForegroundColor = ConsoleColor.Red;
+							Console.WriteLine ("FAIL: Subject did not have enough to do with the sentence!");
+							Console.ForegroundColor = Program.colour;
 						}
-						printedSubject = true;
-					} else
-						generatedPhrase.Add (wordThatFollowsTags (substring));
-					substring = "";
+					}
+					printedSubject = true;
 				} else
-					substring += sentenceModel [i];
+					generatedPhrase.Add (wordThatFollowsTags (syntaxType));
 			}
 			string phrase = "";
-			foreach (Word term in generatedPhrase)
-				phrase += term.name + " ";
+			for (int i = 0; i < generatedPhrase.Count; i++) {
+				if (sentenceModel [i] == "Verb")
+					phrase += Conjugator.conjugate (generatedPhrase [i].name, selectedTense) + " ";
+				else
+					phrase += generatedPhrase [i].name + " ";
+			}
 			return phrase;
 		}
 
@@ -220,7 +226,7 @@ namespace Alyx {
 		}
 
 		/// <summary> Generates a model to create a sentence with. </summary>
-		public string generateSentenceModel () {
+		public string[] generateSentenceModel () {
 			Dictionary<string, string[]> likelyTypes = new Dictionary<string, string[]> () {
 				{ "article", new string[] { "adjective", "adjective", "noun" } },
 				{ "pronoun", new string[] { "adverb", "adverb", "Verb" } },
@@ -231,18 +237,19 @@ namespace Alyx {
 				{ "preposition", new string[] { "article", "article", "pronoun" } },
 				{ "conjunction", new string[] { "pronoun", "article", "article" } },
 			};
-			string model = "";
+			List<string> model = new List<string> ();
 			bool endSentence = false;
 			string currentType = (Program.rndm.Next (2) == 0) ? "article" : "pronoun";
 			while (!endSentence) {
-				model += currentType + " ";
+				model.Add (currentType);
 				currentType = likelyTypes [currentType] [Program.rndm.Next (likelyTypes [currentType].Length)];
-				if (model.Contains ("Verb") && (model.EndsWith ("noun ") || model.EndsWith ("pronoun ")))
+				if (model.Contains ("Verb") && (model [model.Count - 1] == "noun" || model [model.Count - 1] == "pronoun"))
 					endSentence = true;
 			}
-			return model;
+			return model.ToArray ();
 		}
 
+		/// <summary> Guess the syntax of the sentence based on known words... </summary>
 		public string[] detectSyntax () {
 			string syntaxTypes = "article pronoun adjective adverb noun Verb preposition conjunction exclamation name";
 			string[] syntax = new string[words.Length];
@@ -279,10 +286,16 @@ namespace Alyx {
 						syntaxTags.Add ("Verb");
 					} else if (i > 0 && syntaxTags.Contains ("adjective") && syntax [i - 1] == "adjective")
 						syntaxTags.Remove ("adjective");
+					else if (i > 0 && syntaxTags.Contains ("adverb") && syntax [i - 1] == "adjective")
+						syntaxTags.Remove ("adverb");
 					else if (i > 0 && syntaxTags.Contains ("Verb") && syntax [i - 1] == "Verb")
 						syntaxTags.Remove ("Verb");
 					else if (syntaxTags.Contains ("name") && syntaxTags.Contains ("noun"))
 						syntaxTags.Remove ("name");
+					else if (i == 0 && syntaxTags.Contains ("adjective")) {
+						syntaxTags.Clear ();
+						syntaxTags.Add ("adjective");
+					}
 
 					//to avoid infinite loops
 					tries++;
