@@ -5,7 +5,8 @@ namespace Alyx { //Protector of Humanity
 	class Program {
 
 		//SETTINGS:
-		public static bool showAnalysis = true;
+		public static bool showAnalysis = false;
+		public const string gender = "Female";
 
 		public static List<Word> vocab = new List<Word> ();
 		public static Random rndm = new Random ();
