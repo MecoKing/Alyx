@@ -21,7 +21,7 @@ namespace Alyx { //Protector of Humanity
 			Log.Write ("Program.cs", "INFO", "All tests have completed testing...");
 
 			//Write a polite welcome
-			Sentence intro = new Sentence ("Hello Today Alyx");
+			Sentence intro = new Sentence ("Hello, my name is Alyx. How can I be of assistance?");
 			Console.WriteLine ("{0}\n", intro.generate ());
 		}
 

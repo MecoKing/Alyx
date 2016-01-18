@@ -41,6 +41,7 @@
     <Compile Include="Background\Log.cs" />
     <Compile Include="Background\Tests.cs" />
     <Compile Include="Command.cs" />
+    <Compile Include="Simplifier.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
