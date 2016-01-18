@@ -10,16 +10,23 @@ namespace Alyx {
 			{"It Is", new string[] {"It's"}},
 			{"Do Not", new string[] {"Don't"}},
 			{"Was Not", new string[] {"Wasn't"}},
+			{"Can Not", new string[] {"Can't", "Cannot"}},
 			//GROUPS
 			{"Be", new string[] {"Am", "Was", "Is", "Are", "Were", "Being", "Been"}},
 			//REVERSALS
 			{"Good", new string[] {"Not Bad", "Not So Bad", "Not Too Bad", "Not Half Bad"}},
 			{"Alright", new string[] {"Not Awful"}}
 		};
+		//WOULD REALLY LIKE TO ADD WILDCARD (*) FUNCTIONALITY TO THIS...
 
 		static string makeInfinitive (string word) {
 			string notVerbs = "Morning Evening";
-			if (word.EndsWith ("ed") && !notVerbs.Contains (word))
+			Dictionary <string, string> exceptions = new Dictionary<string, string> () {
+				{"Getting", "Get"}, {"Got", "Get"}, {"Coming", "Come"}, {"Came", "Come"}
+			};
+			if (exceptions.ContainsKey (word))
+				return exceptions [word];
+			else if (word.EndsWith ("ed") && !notVerbs.Contains (word))
 				return word.Remove (word.Length - 2, 2);
 			else if (word.EndsWith ("ing") && !notVerbs.Contains (word))
 				return word.Remove (word.Length - 3, 3);
@@ -48,7 +55,10 @@ namespace Alyx {
 			};
 			if (exceptions.ContainsKey (word))
 				return exceptions [word];
-			else if (word.EndsWith ("s") && !notPlural.Contains (word))
+			else if (word.EndsWith ("ies") && !notPlural.Contains (word)) {
+				word = word.Remove (word.Length - 3, 3);
+				return word + "y";
+			} else if (word.EndsWith ("s") && !notPlural.Contains (word))
 				return word.Remove (word.Length - 1, 1);
 			else
 				return word;
@@ -93,12 +103,6 @@ namespace Alyx {
 				}
 			}
 
-
-//			for (int pos = 0; pos < input.words.Length; pos++) {
-//				input.words [pos] = new Word (makeNonPossessive (input.words [pos].name) + ": " + input.words [pos].tags);
-//				input.words [pos] = new Word (makeSingular (input.words [pos].name) + ": " + input.words [pos].tags);
-//				
-//			}
 			return input;
 		}
 	}
