@@ -1,0 +1,8 @@
+START: exclamation Verb
+START exclamation: adverb
+exclamation adverb: Verb
+adverb Verb: pronoun
+Verb pronoun: END noun
+START Verb: pronoun
+pronoun noun: Verb
+noun Verb: END

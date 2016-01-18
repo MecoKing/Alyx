@@ -176,7 +176,7 @@ namespace Alyx {
 			//Eventually choose a tense based on the previous sentences tense...
 			string selectedTense = verbTenses [Program.rndm.Next (verbTenses.Length)];
 			List<Word> generatedPhrase = new List<Word> ();
-			string[] sentenceModel = generateSentenceModel ();
+			string[] sentenceModel = Markov.writeSyntax ();
 			if (Program.showAnalysis) {
 				Console.Write ("SYNTAX: ");
 				foreach (string syn in sentenceModel)
@@ -223,30 +223,6 @@ namespace Alyx {
 				taggedWords = Word.wordsTaggedFromCollection (Program.vocab.ToArray (), type);
 				return taggedWords [Program.rndm.Next (taggedWords.Length)];
 			}
-		}
-
-		/// <summary> Generates a model to create a sentence with. </summary>
-		public string[] generateSentenceModel () {
-			Dictionary<string, string[]> likelyTypes = new Dictionary<string, string[]> () {
-				{ "article", new string[] { "adjective", "adjective", "noun" } },
-				{ "pronoun", new string[] { "adverb", "adverb", "Verb" } },
-				{ "adjective", new string[] { "adjective", "noun", "noun" } },
-				{ "adverb", new string[] { "adverb", "Verb", "Verb" } },
-				{ "noun", new string[] { "adverb", "adverb", "Verb" } },
-				{ "Verb", new string[] { "preposition", "preposition", "conjunction", "article", "article", "article", "pronoun" } },
-				{ "preposition", new string[] { "article", "article", "pronoun" } },
-				{ "conjunction", new string[] { "pronoun", "article", "article" } },
-			};
-			List<string> model = new List<string> ();
-			bool endSentence = false;
-			string currentType = (Program.rndm.Next (2) == 0) ? "article" : "pronoun";
-			while (!endSentence) {
-				model.Add (currentType);
-				currentType = likelyTypes [currentType] [Program.rndm.Next (likelyTypes [currentType].Length)];
-				if (model.Contains ("Verb") && (model [model.Count - 1] == "noun" || model [model.Count - 1] == "pronoun"))
-					endSentence = true;
-			}
-			return model.ToArray ();
 		}
 
 		/// <summary> Guess the syntax of the sentence based on known words... </summary>
@@ -307,6 +283,7 @@ namespace Alyx {
 				syntax [i] = syntaxTags [0];
 					
 			}
+			Markov.readSyntax (syntax);
 			return syntax;
 		}
 	}
