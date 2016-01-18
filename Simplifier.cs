@@ -8,6 +8,16 @@ namespace Alyx {
 			{"Be", new string[] {"Am", "Was", "Is", "Are", "Were", "Being", "Been"}},
 		};
 
+		static string makeInfinitive (string word) {
+			string notVerbs = "Morning Evening";
+			if (word.EndsWith ("ed") && !notVerbs.Contains (word))
+				return word.Remove (word.Length - 2, 2);
+			else if (word.EndsWith ("ing") && !notVerbs.Contains (word))
+				return word.Remove (word.Length - 3, 3);
+			else
+				return word;
+		}
+
 		static string makeNonPossessive (string word) {
 			Dictionary <string, string> exceptions = new Dictionary<string, string> () {
 				{"His", "Him"}
